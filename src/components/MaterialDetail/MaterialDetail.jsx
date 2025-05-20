@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import css from "./materialDetail.module.css";
 
 export const MaterialDetail = () => {
-    const requireImages = require.context('../../avant/', false, /\.(png|jpe?g|svg)$/);
+    const requireImages = require.context('../../avant/', false, /\.(png|jpe?g|webp)$/);
     const images = requireImages.keys().map((filename) => requireImages(filename));
 
       // Состояние для модального окна и выбранного изображения
@@ -40,6 +40,7 @@ export const MaterialDetail = () => {
           alt={`Photo ${index + 1}`} 
           onClick={() => openModal(image)} // Открываем модальное окно при клике
           loading="lazy"
+          
           />
           
       ))}
