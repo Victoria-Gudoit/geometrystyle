@@ -1,12 +1,15 @@
 import css from "../OurWorks/works.module.css";
-import avant from "../../img/caesar.jpg";
+import avant from "../../avant/8044 Эври_ZOOM.webp";
+import noblle from "../../noblle/Q798-Calacatta-Elegant_ZOOM.webp";
 import belenco from "../../img/belenco.jpg";
 import { Link } from "react-router-dom";
 
 export const MaterialsPage = () => {
   const materials = [   
      { image: avant, title: "Avant Quartz", id: 1 },
-    { image: belenco, title: "Noblle Quartz", id: 2 },
+    { image: noblle, title: "Noblle Quartz", id: 2 },
+    { image: belenco, title: "Caesarstone", id: 3 },
+
   ];
 
   return (

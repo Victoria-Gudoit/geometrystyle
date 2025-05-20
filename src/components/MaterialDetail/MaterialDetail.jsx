@@ -10,6 +10,8 @@ export const MaterialDetail = () => {
   const materialMap = {
     1: { folder: "avant", title: "Avant Quartz" },
     2: { folder: "noblle", title: "Noblle" },
+    3: { folder: "caesarstone", title: "Caesarstone" },
+
     // Добавьте другие материалы здесь, например:
     // 3: { folder: 'newCollection', title: 'New Collection' },
   };
@@ -40,6 +42,13 @@ export const MaterialDetail = () => {
         case "noblle": // Или 'belenco', если это опечатка
           requireImages = require.context(
             "../../noblle",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
+          break;
+          case "caesarstone": // Или 'belenco', если это опечатка
+          requireImages = require.context(
+            "../../caesarstone",
             false,
             /\.(png|jpe?g|webp)$/
           );
