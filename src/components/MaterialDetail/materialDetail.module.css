@@ -28,44 +28,6 @@
   .img:hover {
     transform: scale(1.05); /* Легкое увеличение при наведении */
   }
-
-
-  .modal {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modalContent {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 10px;
-    border: 2px solid #fff;
-  }
-  
-  .modalClose {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .modalClose:hover {
-    color: #bbb;
-  }
-
   
   /* Адаптивность: на маленьких экранах — один столбец */
   @media (max-width: 768px) {

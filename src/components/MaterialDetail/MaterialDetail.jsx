@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import css from "./materialDetail.module.css";
+import { Modal } from "../Modal";
 
 export const MaterialDetail = () => {
+  const [images, setImages] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
   // Получаем ID материала из URL
   const { id } = useParams();
 
@@ -11,9 +16,7 @@ export const MaterialDetail = () => {
     1: { folder: "avant", title: "Avant Quartz" },
     2: { folder: "noblle", title: "Noblle" },
     3: { folder: "caesarstone", title: "Caesarstone" },
-
-    // Добавьте другие материалы здесь, например:
-    // 3: { folder: 'newCollection', title: 'New Collection' },
+    4: { folder: "avarus", title: "Аварус" },
   };
 
   // Текущая папка и заголовок на основе ID
@@ -21,10 +24,6 @@ export const MaterialDetail = () => {
     folder: "avant",
     title: "Avant Quartz",
   };
-
-  const [images, setImages] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   // Функция для загрузки изображений из указанной папки
   const loadImages = (folder) => {
@@ -39,16 +38,23 @@ export const MaterialDetail = () => {
             /\.(png|jpe?g|webp)$/
           );
           break;
-        case "noblle": // Или 'belenco', если это опечатка
+        case "noblle":
           requireImages = require.context(
             "../../noblle",
             false,
             /\.(png|jpe?g|webp)$/
           );
           break;
-          case "caesarstone": // Или 'belenco', если это опечатка
+        case "caesarstone":
           requireImages = require.context(
             "../../caesarstone",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
+          break;
+        case "avarus":
+          requireImages = require.context(
+            "../../avarus",
             false,
             /\.(png|jpe?g|webp)$/
           );
@@ -75,24 +81,9 @@ export const MaterialDetail = () => {
     loadImages(currentMaterial.folder);
   }, [currentMaterial.folder]);
 
-  // Функция открытия модального окна
   const openModal = (image) => {
     setSelectedImage(image);
     setIsModalOpen(true);
-  };
-
-  // Функция закрытия модального окна
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
-
-  // Обработчик клика по модальному окну
-  const handleModalClick = (e) => {
-    // Закрываем модальное окно только если клик был по самому .modal (фону)
-    if (e.target.classList.contains(css.modal)) {
-      closeModal();
-    }
   };
 
   return (
@@ -105,25 +96,17 @@ export const MaterialDetail = () => {
             className={css.img}
             src={image}
             alt={`Photo ${index + 1}`}
-            onClick={() => openModal(image)} // Открываем модальное окно при клике
+            onClick={() => openModal(image)}
             loading="lazy"
           />
         ))}
       </div>
-
-      {/* Модальное окно */}
-      {isModalOpen && (
-        <div className={css.modal} onClick={handleModalClick}>
-          <span className={css.modalClose} onClick={closeModal}>
-            ×
-          </span>
-          <img
-            className={css.modalContent}
-            src={selectedImage}
-            alt="Full screen"
-          />
-        </div>
-      )}
+      <Modal
+        isModalOpen={isModalOpen}
+        selectedImage={selectedImage}
+        setSelectedImage={setSelectedImage}
+        setIsModalOpen={setIsModalOpen}
+      />
     </section>
   );
 };
