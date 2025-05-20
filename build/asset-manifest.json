@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6af1cdf6.css",
+    "main.js": "/static/js/main.b240bfc5.js",
+    "static/media/img-02.jpg": "/static/media/img-02.d78268b9891cb382910a.jpg",
+    "static/media/img-01.jpg": "/static/media/img-01.74eeea8545c3d6a62c47.jpg",
+    "static/media/podokonnik.png": "/static/media/podokonnik.70a606d91d563277721c.png",
+    "static/media/belenco.jpg": "/static/media/belenco.1a1bc38fef15178ac9fc.jpg",
+    "static/media/kuchnia.jpeg": "/static/media/kuchnia.408b2f9136903916000b.jpeg",
+    "static/media/work-one.jpg": "/static/media/work-one.d98819c2962f1c7457b3.jpg",
+    "static/media/work-two.jpg": "/static/media/work-two.9a9ba44785fadf08aac8.jpg",
+    "static/media/work-three.jpg": "/static/media/work-three.157be89db3d5d4a50a2d.jpg",
+    "static/media/technistone.jpg": "/static/media/technistone.2b1c0f04fbfed5cee576.jpg",
+    "static/media/contacts.jpg": "/static/media/contacts.091d0791c88b00831e47.jpg",
+    "static/media/vannaya.jpg": "/static/media/vannaya.91df9c65480cc7c3f05a.jpg",
+    "static/media/caesar.jpg": "/static/media/caesar.0ec94412af29c6142f5a.jpg",
+    "static/media/instagram.svg": "/static/media/instagram.36bc724099d77ceb9495acf9a6752ab5.svg",
+    "index.html": "/index.html",
+    "main.6af1cdf6.css.map": "/static/css/main.6af1cdf6.css.map",
+    "main.b240bfc5.js.map": "/static/js/main.b240bfc5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6af1cdf6.css",
+    "static/js/main.b240bfc5.js"
+  ]
+}

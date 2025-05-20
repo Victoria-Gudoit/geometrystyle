@@ -1,0 +1,11 @@
+{
+    "category": [{
+        "id": 1,
+        "title": "roy",
+        "location": "india"
+    }, {
+        "id": 2,
+        "name": "sam",
+        "location": "wales"
+    }]
+}

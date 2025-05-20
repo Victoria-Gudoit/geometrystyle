@@ -1,0 +1,42 @@
+.about {
+  padding: 11rem 10rem;
+}
+
+.blockone {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #926341;
+}
+
+.text {
+  color: black;
+}
+
+.list {
+  list-style: disc;
+  gap: 5rem;
+}
+
+.list li:not(:last-child) {
+  padding-bottom: 1rem;
+}
+
+.paragraph {
+  padding-bottom: 1rem;
+}
+
+.item {
+  padding-top: 1rem;
+}
+
+
+@media (max-width: 600px) {
+  .about {
+  padding: 8rem 3rem;
+}
+}

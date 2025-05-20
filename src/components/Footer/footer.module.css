@@ -1,0 +1,39 @@
+.footer {
+  background-color: #3b3937;
+  max-height: 30rem;
+  min-height: calc(100vh - 518px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+  padding: 3rem 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  cursor: pointer;
+}
+
+.rights {
+  text-align: center;
+}
+
+@media (max-width: 353px) {
+  .rights {
+    font-size: 1.7rem;
+  }
+}
