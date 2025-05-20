@@ -1,7 +1,7 @@
 import React from "react";
 import { Slider } from "./components/Slider";
-import img01 from "./img/img-01.jpg";
-import img02 from "./img/img-02.jpg";
+import img01 from "./img/img-01.webp";
+import img02 from "./img/img-02.webp";
 
 const swiperImages = [
   {
