@@ -7,7 +7,6 @@ export const Modal = ({
   setSelectedImage,
   setIsModalOpen,
 }) => {
-  // Функция открытия модального окна
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedImage(null);
