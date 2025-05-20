@@ -1,7 +1,7 @@
 import React from "react";
 import vannaya from "../../img/bath.webp";
 import kuchnia from "../../img/otherkitchen.webp";
-import podokonnik from "../../img/windowsill.webp";
+import windowsill from "../../img/windowsill.webp";
 import other from "../../img/other.webp";
 import bar from "../../img/bar.webp";
 import island from "../../img/island.webp";
@@ -48,7 +48,7 @@ const products = [
       "Какой бы материал вы ни выбрали – акриловый камень или кварцевый агломерат, в любом случае оконный проем с этим подоконником будет выглядеть роскошно, а многообразие цветовых решений и фактур, которые мы предлагаем, создадут пространство для вашего творчества и фантазии.",
   },
   {
-    image: podokonnik,
+    image: windowsill,
     title: "Подоконники из камня",
     subtitle:
       "Какой бы материал вы ни выбрали – акриловый камень или кварцевый агломерат, в любом случае оконный проем с этим подоконником будет выглядеть роскошно, а многообразие цветовых решений и фактур, которые мы предлагаем, создадут пространство для вашего творчества и фантазии.",

@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./contacts.module.css";
-import contacts from "../../img/contacts.jpg";
+import contacts from "../../img/otherkitchen.webp";
 
 export const Contacts = () => {
   return (

@@ -39,4 +39,8 @@
   .about {
   padding: 8rem 3rem;
 }
+
+.title {
+  padding-top: 2rem;
+}
 }
