@@ -39,6 +39,7 @@ export const MaterialDetail = () => {
           src={image}
           alt={`Photo ${index + 1}`} 
           onClick={() => openModal(image)} // Открываем модальное окно при клике
+          loading="lazy"
           />
           
       ))}
