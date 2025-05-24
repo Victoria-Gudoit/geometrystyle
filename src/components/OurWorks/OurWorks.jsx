@@ -36,7 +36,7 @@ const works = [
   },
   {
     image: workTwo,
-    title: "Столешница из камня для кухни",
+    title: "Столешница из кварцевого камня для кухни",
     subtitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tincidunt nunc laoreet porttitor. Etiam tristique eu ipsum eu mollis. Phasellus gravida urna est, in aliquam arcu varius a. Quisque a sapien eget felis elementum porttitor in eget erat. Nulla odio massa, dapibus ut vehicula euismod, volutpat eu justo. Vivamus et venenatis augue. Proin eu arcu mollis, tincidunt est nec.",
 
   },

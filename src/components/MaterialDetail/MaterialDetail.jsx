@@ -62,16 +62,19 @@ export const MaterialDetail = () => {
         default:
           console.warn(`Папка ${folder} не найдена, используем avant`);
           requireImages = require.context(
-            "../avant",
+            "../../avant",
             false,
             /\.(png|jpe?g|webp)$/
           );
       }
-      const loadedImages = requireImages
-        .keys()
-        .map((filename) => requireImages(filename));
+      const loadedImages = requireImages.keys().map((filename) => ({
+        src: requireImages(filename), // Путь к изображению
+        alt: filename.split("/").pop().split(".")[0], // Извлекаем имя файла без пути и расширения
+      }));
+
       setImages(loadedImages);
     } catch (error) {
+      console.error("Ошибка загрузки изображений:", error);
       setImages([]);
     }
   };
@@ -82,7 +85,7 @@ export const MaterialDetail = () => {
   }, [currentMaterial.folder]);
 
   const openModal = (image) => {
-    setSelectedImage(image);
+    setSelectedImage(image.src);
     setIsModalOpen(true);
   };
 
@@ -94,8 +97,8 @@ export const MaterialDetail = () => {
           <img
             key={index}
             className={css.img}
-            src={image}
-            alt={`Photo ${index + 1}`}
+            src={image.src}
+            alt={image.alt}
             onClick={() => openModal(image)}
             loading="lazy"
           />
