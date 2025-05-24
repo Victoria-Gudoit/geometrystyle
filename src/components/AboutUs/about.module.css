@@ -13,6 +13,11 @@
   color: #926341;
 }
 
+.subtitle {
+  color: #926341;
+
+}
+
 .text {
   color: black;
 }
@@ -20,6 +25,11 @@
 .list {
   list-style: disc;
   gap: 5rem;
+  font-weight: 600;
+}
+
+.item {
+  font-weight: normal;
 }
 
 .list li:not(:last-child) {
