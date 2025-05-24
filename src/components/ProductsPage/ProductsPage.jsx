@@ -62,22 +62,25 @@ export const ProductsPage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [text, setText] = useState(null);
 
-
   const openModal = (image, title, text) => {
     setSelectedImage(image);
-    setTitle(title)
-    setText(text)
+    setTitle(title);
+    setText(text);
     setIsModalOpen(true);
-  }
+  };
 
   return (
     <section className={css.main}>
-      <h1 className={css.title}>
-        Найди новые идеи и вдохновись
-      </h1>
+      <h1 className={css.title}>Найди новые идеи и вдохновись</h1>
       <div className={css.work}>
         {products.map((product) => (
-          <article key={product.title} className={css.wrapper}  onClick={() => openModal(product.image, product.title, product.subtitle)}>
+          <article
+            key={product.title}
+            className={css.wrapper}
+            onClick={() =>
+              openModal(product.image, product.title, product.subtitle)
+            }
+          >
             <img className={css.img} src={product.image} alt={product.title} />
             <h2 className={css.text}>{product.title}</h2>
             <p className={css.text}>{product.subtitle}</p>
