@@ -26,6 +26,7 @@ align-items: center;
 }
 
 .text {
+  font-size: 2rem;
   word-wrap: break-word;
   text-align: center;
   width: 100%;
@@ -39,6 +40,20 @@ align-items: center;
 .wrapper:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.readMore {
+  color: #a9845c;
+  /* Синий цвет, как у ссылок */
+  cursor: pointer;
+  border-bottom: 1px solid #a9845c;
+  margin-left: 5px;
+}
+
+.readMore:hover {
+  color: #926341; /* Цвет при наведении */
+  border-bottom: 1px solid #926341;
+
 }
 
 

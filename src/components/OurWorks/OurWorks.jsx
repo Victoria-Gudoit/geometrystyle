@@ -8,6 +8,7 @@ import workFive from "../../img/ku.webp";
 import workSix from "../../img/ourstairs.webp";
 import { Modal } from "../Modal";
 import { SmallModal } from "../SmallModal";
+import { truncateText } from "../utils";
 
 const works = [
   {
@@ -74,7 +75,18 @@ export const OurWorks = () => {
           >
             <img className={css.img} src={work.image} alt={work.title} />
             <h2 className={css.text}>{work.title}</h2>
-            <p className={css.text}>{work.subtitle}</p>
+            <p className={css.text}>
+              {truncateText(work.subtitle)}
+              <span
+                className={css.readMore}
+                onClick={(e) => {
+                  e.stopPropagation(); // Предотвращаем срабатывание клика по всей карточке
+                  openModal(work.image, work.title, work.subtitle);
+                }}
+              >
+                ...ещё
+              </span>
+            </p>
           </article>
         ))}
       </div>

@@ -34,6 +34,17 @@
   cursor: pointer;
 }
 
+.readMore {
+  color: #007bff; /* Синий цвет, как у ссылок */
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.readMore:hover {
+  color: #0056b3; /* Цвет при наведении */
+}
+
 @media (max-width: 992px) {
   .product {
     flex-direction: column;
