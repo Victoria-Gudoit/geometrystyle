@@ -6,8 +6,7 @@ export const SmallModal = ({
   selectedImage,
   setSelectedImage,
   setIsModalOpen,
-  title, // Новый пропс для заголовка (опциональный)
-  text,  // Новый пропс для текста (опциональный)
+  description, // Новый пропс для заголовка (опциональный)
 }) => {
   const closeModal = () => {
     setIsModalOpen(false);
@@ -33,11 +32,11 @@ export const SmallModal = ({
               <img
                 className={css.modalImage}
                 src={selectedImage}
-                alt={title || "Full screen"} 
+                alt={description || "Full screen"} 
               />
             )}
-            {title && <h2 className={css.modalTitle}>{title}</h2>}
-            {text && <p className={css.modalText}>{text}</p>}
+            {description && <h2 className={css.modalTitle}>{description}</h2>}
+            {/* {text && <p className={css.modalText}>{text}</p>} */}
           </div>
         </div>
       )}
