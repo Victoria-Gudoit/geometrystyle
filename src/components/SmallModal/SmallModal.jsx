@@ -6,7 +6,7 @@ export const SmallModal = ({
   selectedImage,
   setSelectedImage,
   setIsModalOpen,
-  description, // Новый пропс для заголовка (опциональный)
+  description,
 }) => {
   const closeModal = () => {
     setIsModalOpen(false);
@@ -14,7 +14,6 @@ export const SmallModal = ({
   };
 
   const handleModalClick = (e) => {
-    // Закрываем модальное окно только если клик был по самому .modal (фону)
     if (e.target.classList.contains(css.modal)) {
       closeModal();
     }
@@ -32,11 +31,10 @@ export const SmallModal = ({
               <img
                 className={css.modalImage}
                 src={selectedImage}
-                alt={description || "Full screen"} 
+                alt={description || "Full screen"}
               />
             )}
             {description && <h2 className={css.modalTitle}>{description}</h2>}
-            {/* {text && <p className={css.modalText}>{text}</p>} */}
           </div>
         </div>
       )}

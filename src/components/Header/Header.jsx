@@ -38,7 +38,7 @@ export const Header = () => {
       </nav>
       <div className={css.btns}>
         <MyButton to="/materials">Материалы</MyButton>
-        <MyButton to="/products">Изделия</MyButton>
+        <MyButton to="/production">Производство</MyButton>
       </div>
       <Menu
         active={menuActive}

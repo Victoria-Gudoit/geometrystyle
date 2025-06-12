@@ -1,0 +1,131 @@
+.main {
+  padding: 11rem 7rem;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #926341;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.videoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.videoWrapper {
+  width: calc(33.333% - 2rem); /* 3 видео в ряд с учетом gap */
+  min-width: 280px; /* Минимальная ширина для маленьких экранов */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  background: #fff; /* Фон для контраста */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.videoWrapper:hover {
+  transform: translateY(-5px); /* Легкий подъем вместо масштабирования */
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Фиксируем пропорции видео */
+  max-height: 300px; /* Ограничиваем высоту */
+  object-fit: cover; /* Заполняет контейнер без искажений */
+  border-radius: 8px;
+}
+
+.videoTitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.videoDescription {
+  font-size: 1.4rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Для экранов ≤ 1024px (планшеты) */
+@media (max-width: 1024px) {
+  .videoWrapper {
+    width: 100%; /* 2 видео в ряд */
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .video {
+    max-height: 250px;
+  }
+}
+
+/* Для экранов ≤ 768px (мобильные устройства) */
+@media (max-width: 768px) {
+  .videoGallery {
+    padding: 3rem 1rem;
+  }
+
+  .videoWrapper {
+    width: 100%; /* Одно видео в ряд */
+    min-width: unset;
+    padding: 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .videoTitle {
+    font-size: 1.6rem;
+  }
+
+  .videoDescription {
+    font-size: 1.2rem;
+  }
+
+  .video {
+    max-height: 200px;
+  }
+
+  .videoList {
+    gap: 2rem;
+  }
+}
+
+/* Для экранов ≤ 480px (маленькие мобильные) */
+@media (max-width: 480px) {
+  .videoGallery {
+    padding: 2rem 0.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .videoWrapper {
+    padding: 0.5rem;
+  }
+
+  .video {
+    max-height: 180px;
+  }
+
+  .videoTitle {
+    font-size: 1.4rem;
+  }
+
+  .videoDescription {
+    font-size: 1rem;
+  }
+}

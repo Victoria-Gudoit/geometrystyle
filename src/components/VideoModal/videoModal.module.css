@@ -1,0 +1,86 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContentWrapper {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .modalVideo {
+    width: 100%;
+    max-width: 1200px; /* Ограничиваем ширину для больших экранов */
+    max-height: 80vh; /* Ограничиваем высоту */
+    aspect-ratio: 16 / 9; /* Сохраняем пропорции */
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .modalClose {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .modalTitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 1rem 0 0;
+    text-align: center;
+  }
+  
+  /* Для экранов ≤ 768px */
+  @media (max-width: 768px) {
+    .modalContentWrapper {
+      padding: 10px;
+      max-width: 95%;
+    }
+  
+    .modalVideo {
+      max-height: 70vh;
+    }
+  
+    .modalTitle {
+      font-size: 1.6rem;
+    }
+  }
+  
+  /* Для экранов ≤ 480px */
+  @media (max-width: 480px) {
+    .modalContentWrapper {
+      padding: 5px;
+    }
+  
+    .modalVideo {
+      max-height: 60vh;
+    }
+  
+    .modalTitle {
+      font-size: 1.4rem;
+    }
+  
+    .modalClose {
+      font-size: 20px;
+      right: 15px;
+    }
+  }
