@@ -20,7 +20,7 @@ export const Menu = ({ items, active, setActive }) => {
         </ul>
         <div onClick={() => setActive(false)} className="menu__btns">
         <MyButton to="/materials">Материалы</MyButton>
-        <MyButton to="/products">Изделия</MyButton>
+        <MyButton to="/production">Производство</MyButton>
       </div>
       </nav>
     </div>
