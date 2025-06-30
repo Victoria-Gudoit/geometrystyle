@@ -1,27 +1,42 @@
-import workOne from "../img/bathroom.webp";
 import other from "../img/other.webp";
+import kom from "../img/kom.webp"
+
 import workThree from "../img/sill.webp";
 import workFour from "../img/reception.webp";
-import workFive from "../img/ku.webp";
+
 import workSix from "../img/ourstairs.webp";
+
 import bar from "../img/bar.webp";
-import vannaya from "../img/bath.webp";
-import kitchen1 from "../img/mykichen.webp"
+import barTwo from "../img/barn.webp"
+
+import workOne from "../img/bathroom.webp";
+import bathTwo from "../img/b1jpg.webp"
+import bathThree from "../img/b2.webp"
+
+
+import kitchen1 from "../img/kitchenOne.webp"
+import kitchen2 from "../img/kitchenTwo.webp"
+import workFive from "../img/ku.webp";
+
+import sillOne from "../img/11.webp"
+import sillTwo from "../img/222.webp"
+import sillThree from "../img/333.webp"
+
 
 export const works = [
     {
-      images: [workOne, vannaya],
+      images: [workOne, bathTwo, bathThree],
       title: "Столешницы из камня для ванной комнаты",
       id: 1,
       subtitle: "Столешницы из кварцевого агломерата для ванных комнат стоит выбирать из-за их непористой структуры, которая предотвращает впитывание влаги и защищает от плесени и бактерий, обеспечивая гигиеничность. Они также устойчивы к косметическим средствам, царапинам и просты в уходе, сохраняя элегантный вид на долгие годы.",
-      description: ["Изготовлена из квацевого камня Nobble 'Bianco Gioia'", "Изготовлена из квацевого камня Аварус 'Черное море'"]
+      description: ["Изготовлена из квацевого камня Nobble 'Bianco Gioia'", "Изготовлена из квацевого камня Stratos Milky White (матовый)", "Изготовлена из квацевого камня Caesarstone 'Calacatta Nuvo'"]
     },
     {
-      images: [workFive, kitchen1],
+      images: [workFive, kitchen1, kitchen2],
       title: "Столешницы из камня для кухни",
       id: 2,
       subtitle: "Столешницы из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к влаге, царапинам и химическим веществам, что делает их идеальными для кухонь и ванных комнат. Они долговечны, гигиеничны, не требуют сложного ухода и сохраняют эстетичный вид на десятилетия.",
-      description: ["Изготовлена из квацевого камня Nobble 'Calacatta Magic White'", "Изготовлена из квацевого камня Avant 'Статуарио'"]
+      description: ["Изготовлена из квацевого камня Nobble 'Calacatta Magic White'", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Samsung Radianz Acacia"]
     },
   
     {
@@ -40,26 +55,26 @@ export const works = [
       description: ["Изготовлена из квацевого камня Avant 'Аквитания Бланка'"]
     },
     {
-      images: [other],
+      images: [other, kom],
       title: "Прочее",
       id: 5,
       subtitle: "Изделия из кварцевого агломерата, такие как навесные полочки, подставки для растений или декоративные панели, стоит выбирать за их долговечность, устойчивость к влаге и легкость в уходе, что делает их идеальными для любых интерьеров. Они также предлагают эстетическую универсальность, позволяя создавать стильные и функциональные элементы, например, настенные консоли или рамки для зеркал, которые сохраняют безупречный вид годами.",
-      description: ["Изготовлена из квацевого камня Avant 'Аваллон'"]
+      description: ["Полка изготовлена из квацевого камня Avant 'Аваллон'", "Столешница на комод из кварцевого камня Avant 'Иль Де Франс'"]
 
     },
     {
-      images: [workThree],
+      images: [sillTwo, workThree, sillOne, sillThree],
       title: "Подоконник из камня",
       id: 6,
       subtitle: "Подоконники из кварцевого агломерата стоит выбирать из-за их высокой прочности, устойчивости к влаге и перепадам температур, что идеально для помещений с повышенной влажностью или частым воздействием солнца. Они не требуют сложного ухода, устойчивы к пятнам и царапинам, сохраняя эстетичный вид на долгие годы.",
-      description: ["Изготовлена из квацевого камня Caesarstone 'Frosty Carrina'"]
+      description: ["Подоконник из квацевого камня Avant Calacatta", "Подоконник из квацевого камня Caesarstone Frosty Carrina", "Подоконник из квацевого камня Belenco Carrara Luca", , "Подоконник из квацевого камня Belenco White"]
 
     },
     {
-      images: [bar],
+      images: [bar, barTwo],
       title: "Барная стойка",
       id: 7,
       subtitle: "Барные стойки из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к пятнам, царапинам и воздействию жидкостей, что делает их идеальными для интенсивного использования в барах и ресторанах. Они также отличаются долговечностью, легкостью в уходе и привлекательным дизайном, который подчеркивает стиль интерьера.",
-      description: ["Изготовлена из квацевого камня Noblle 'Calacatta Borghini'"]
+      description: ["Изготовлена из квацевого камня Noblle 'Calacatta Borghini'", "Изготовлена из квацевого камня Belenco 'Calacatta Venezia"]
     },
   ];
