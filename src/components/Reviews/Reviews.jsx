@@ -11,22 +11,18 @@ const reviews = [
   {
     id: 1,
     image: reviewOne, // Базовое изображение
-    imageHighRes: "/images/review1@2x.webp", // Для ретина-экранов
   },
   {
     id: 2,
     image: reviewTwo,
-    imageHighRes: "/images/review2@2x.webp",
   },
   {
     id: 3,
     image: reviewThree,
-    imageHighRes: "/images/review3@2x.webp",
   },
   {
     id: 3,
     image: reviewFour,
-    imageHighRes: "/images/review3@2x.webp",
   },
 ];
 
@@ -39,7 +35,6 @@ export const Reviews = () => {
           <div key={review.id} className={css.reviewCard}>
             <img
               src={review.image}
-              srcSet={`${review.image} 1x, ${review.imageHighRes} 2x`}
               alt={`Отзыв ${review.id}`}
               className={css.reviewImage}
               loading="lazy"
