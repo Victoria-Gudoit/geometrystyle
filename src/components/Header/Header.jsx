@@ -12,6 +12,8 @@ export const Header = () => {
     { value: "О нас", href: "/aboutUs" },
     { value: "Наши работы", href: "/ourWorks" },
     { value: "Контакты", href: "/contacts" },
+    { value: "Отзывы", href: "/reviews" },
+
   ];
 
   return (
