@@ -6,7 +6,7 @@ import { works } from "../../data";
 export const OurWorks = () => {
   return (
     <section className={css.main}>
-      <h1 className={css.title}>Примеры работ</h1>
+      <h1 className={css.title}>Наши работ</h1>
       <div className={css.work}>
         {works.map((work) => (
           <Link
