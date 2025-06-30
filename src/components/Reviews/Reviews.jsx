@@ -1,72 +1,52 @@
-// Reviews.js
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import css from "./reviews.module.css";
 
-import reviewOne from "../../img/reviews/reviewOne.webp"
-import reviewTwo from "../../img/reviews/reviewTwo.webp"
-import reviewThree from "../../img/reviews/reviewThree.webp"
-
+import reviewOne from "../../img/reviews/reviewOne.webp";
+import reviewTwo from "../../img/reviews/reviewTwo.webp";
+import reviewThree from "../../img/reviews/reviewThree.webp";
+import reviewFour from "../../img/reviews/reviewFour.webp";
 
 // Статический массив с отзывами
 const reviews = [
   {
     id: 1,
-    image: reviewOne
+    image: reviewOne, // Базовое изображение
+    imageHighRes: "/images/review1@2x.webp", // Для ретина-экранов
   },
   {
     id: 2,
-    image: reviewTwo
+    image: reviewTwo,
+    imageHighRes: "/images/review2@2x.webp",
   },
   {
     id: 3,
-    image: reviewThree
+    image: reviewThree,
+    imageHighRes: "/images/review3@2x.webp",
+  },
+  {
+    id: 3,
+    image: reviewFour,
+    imageHighRes: "/images/review3@2x.webp",
   },
 ];
 
 export const Reviews = () => {
-  const sliderSettings = {
-    dots: true, // Минималистичные точки навигации
-    infinite: true, // Зацикленный слайдер
-    speed: 500, // Скорость анимации (в миллисекундах)
-    slidesToShow: 2, // Показывать по два слайда
-    slidesToScroll: 1, // Прокручивать по одному слайду
-    arrows: false, // Без стрелок для минимализма
-    autoplay: true, // Включаем автопрокрутку
-    autoplaySpeed: 3000, // Интервал автопрокрутки (3 секунды)
-    pauseOnHover: true, // Пауза при наведении мыши
-    responsive: [
-      {
-        breakpoint: 1024, // Таблетки
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 600, // Мобильные устройства
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section className={css.reviewsSection}>
       <h2 className={css.title}>Отзывы наших клиентов</h2>
-      <Slider {...sliderSettings}>
+      <div className={css.reviewsGrid}>
         {reviews.map((review) => (
           <div key={review.id} className={css.reviewCard}>
-      <img
+            <img
               src={review.image}
+              srcSet={`${review.image} 1x, ${review.imageHighRes} 2x`}
               alt={`Отзыв ${review.id}`}
               className={css.reviewImage}
+              loading="lazy"
             />
           </div>
         ))}
-      </Slider>
+      </div>
     </section>
   );
 };
