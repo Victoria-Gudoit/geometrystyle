@@ -1,0 +1,89 @@
+.reviewsSection {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 110px 40px;
+    text-align: center;
+    background-color: #ffffff; /* Чисто белый фон */
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 50px;
+    line-height: 1.2;
+  }
+  
+  .reviewCard {
+    cursor: pointer;
+    background: #f9f9f9; /* Более мягкий розовый постельный оттенок (меньше яркости, чем #fce4ec) */
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px; /* Отступы внутри карточки */
+    box-sizing: border-box;
+  }
+  
+  .reviewCard:hover {
+    transform: translateY(-10px);
+  }
+
+  .reviewImage {
+    width: 100%; /* Изображение занимает всю ширину карточки */
+    height: auto; /* Сохраняет пропорции */
+    /* max-height: 200px;  */
+    object-fit: cover; /* Обрезает изображение, если оно не помещается */
+    border-radius: 8px; /* Скругленные углы (опционально) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для красоты */
+  }
+  
+  /* Стили для точек навигации */
+  .slick-dots {
+    margin-top: 30px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 14px;
+    color: #b0bec5; /* Пастельный голубой */
+  }
+
+  /* Адаптивность */
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 2.5rem;
+    }
+  
+
+  
+    .name {
+      font-size: 2.5rem;
+    }
+  
+    .text {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .reviewsSection {
+      padding: 115px 20px;
+    }
+  
+    .title {
+      font-size: 2.3rem;
+    }
+  
+
+  
+    .name {
+      font-size: 2.4rem;
+    }
+  
+    .text {
+      font-size: 2rem;
+    }
+  }
