@@ -1,16 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import css from "./reviews.module.css";
 
 import reviewOne from "../../img/reviews/reviewOne.webp";
 import reviewTwo from "../../img/reviews/reviewTwo.webp";
 import reviewThree from "../../img/reviews/reviewThree.webp";
 import reviewFour from "../../img/reviews/reviewFour.webp";
+import { Modal } from "../Modal";
+
 
 // Статический массив с отзывами
 const reviews = [
   {
     id: 1,
-    image: reviewOne, // Базовое изображение
+    image: reviewThree, // Базовое изображение
   },
   {
     id: 2,
@@ -18,15 +20,24 @@ const reviews = [
   },
   {
     id: 3,
-    image: reviewThree,
+    image: reviewOne,
   },
   {
-    id: 3,
+    id: 4,
     image: reviewFour,
   },
 ];
 
 export const Reviews = () => {
+  const [images, setImages] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (image) => {
+    setSelectedImage(image.image);
+    setIsModalOpen(true);
+  };
+  
   return (
     <section className={css.reviewsSection}>
       <h2 className={css.title}>Отзывы наших клиентов</h2>
@@ -37,11 +48,17 @@ export const Reviews = () => {
               src={review.image}
               alt={`Отзыв ${review.id}`}
               className={css.reviewImage}
-              loading="lazy"
+              loading="lazy"   onClick={() => openModal(review)}
             />
           </div>
         ))}
       </div>
+      <Modal
+        isModalOpen={isModalOpen}
+        selectedImage={selectedImage}
+        setSelectedImage={setSelectedImage}
+        setIsModalOpen={setIsModalOpen}
+      />
     </section>
   );
 };
