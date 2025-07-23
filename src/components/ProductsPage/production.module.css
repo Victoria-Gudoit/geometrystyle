@@ -35,8 +35,7 @@
 
 .video {
   width: 100%;
-  aspect-ratio: 16 / 9; /* Фиксируем пропорции видео */
-  max-height: 300px; /* Ограничиваем высоту */
+  max-height: 600px; /* Ограничиваем высоту */
   object-fit: cover; /* Заполняет контейнер без искажений */
   border-radius: 8px;
 }

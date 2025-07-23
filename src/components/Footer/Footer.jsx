@@ -1,18 +1,23 @@
 import React from "react";
 import css from "./footer.module.css";
-import instagram from "../../img/instagram.svg";
+import instagram from "../../img/instagram.png";
+import viber from "../../img/viber.png";
+import telegram from "../../img/telegram.png";
+
 
 export const Footer = () => {
   return (
     <footer className={css.footer}>
       <div className={css.wrapper}>
         <address className={css.contacts}>
-          +375 (29) 548-45-98 <br />
-          <a href="mailto:infostone@mail.ru"> infostone@mail.ru</a>
+        <div>     <img src={viber} className={css.viber} alt="viber" />
+          <img src={telegram} alt="telegram" /></div>
+          +375 (44) 751-77-00 <br />
+          <a href="mailto:stilya.geometriya@mail.ru"> stilya.geometriya@mail.ru</a>
         </address>
-        <img className={css.img} src={instagram} alt="instagram" />
+        <a href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv" target="_blank"><img className={css.img} src={instagram} alt="instagram" /></a>
         <div className={css.rights}>
-          © 2025. All Rights Reserved. Design by VictoriaGud
+          © 2025. УНП 193857310
         </div>
       </div>
     </footer>

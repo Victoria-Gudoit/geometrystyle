@@ -1,9 +1,8 @@
-import video1 from "../video/video1.MP4";
-import video2 from "../video/video2.MP4";
-import video3 from "../video/video3.MP4";
-import preview1 from "../img/video1.webp"; 
-import preview2 from "../img/video2.webp";
-import preview3 from "../img/video3.webp";
+import video1 from "../video/IMG_7679.MOV";
+import video2 from "../video/IMG_7691.MOV";
+
+import preview1 from "../img/kitchen/w_01.webp"; 
+import preview2 from "../img/bathroom/w_01.webp";
 
 export const videos = [
 
@@ -11,21 +10,15 @@ export const videos = [
     id: 1,
     src: video1,
     poster: preview2,
-    title: "Процесс монтажа светодиодной подсветки в радиусный остров часть 1",
-    description: "Этапы монтажа острова из кварца.",
+    title: "Столешница в ванную комнату из кварцевого агломерата Radianz Everest white.",
+    description: "Полированная с двух сторон со стандартной евро фаской. Места примыкания столешницы к плитке были промазаны герметиком и подобраны в цвет плитки заказчика.",
   }, 
    {
     id: 2,
     src: video2,
     poster: preview1,
-    title: "Процесс монтажа светодиодной подсветки в радиусный остров часть 2",
-    description: "Демонстрация работы с кварцевым агломератом.",
+    title: "Столешница в ванную комнату из кварцевого агломерата Stratos C7109 Cloud Concrete",
+    description: "Этапы производства и установки столешницы.",
   },
-  {
-    id: 3,
-    src: video3,
-    poster: preview3,
-    title: "Обзор подоконника",
-    description: "Готовый подоконник в дом клиента.",
-  },
+
 ];

@@ -4,7 +4,7 @@ import css from "./header.module.css";
 import { MyButton } from "../UI/button";
 import { Menu } from "../Menu";
 import "../Menu/menu.css";
-import logo from "../../img/logo1.svg";
+import logo from "../../img/logo.svg";
 
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);

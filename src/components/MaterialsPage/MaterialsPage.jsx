@@ -3,6 +3,8 @@ import avant from "../../avant/7060 Калакатта Мон Сен-Мишел�
 import noblle from "../../noblle/Q798-Calacatta-Elegant_ZOOM.webp";
 import caesarstone from "../../caesarstone/6270 Atlantic salt_Caesarstone_zoom.webp";
 import avarus from "../../avarus/R538 Горы Кавказа_ZOOM.webp";
+import radianz from "../../radianz/4.webp";
+
 
 import { Link } from "react-router-dom";
 
@@ -12,6 +14,8 @@ export const MaterialsPage = () => {
     { image: noblle, title: "Noblle Quartz", id: 2 },
     { image: caesarstone, title: "Caesarstone", id: 3 },
     { image: avarus, title: "Аварус", id: 4 },
+    { image: radianz, title: "Radianz", id: 5 },
+
   ];
 
   return (

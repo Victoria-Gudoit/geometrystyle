@@ -27,7 +27,6 @@ export const ProductionProcess = () => {
               src={video.src}
               poster={video.poster}
               controls
-              muted
               loop
               playsInline
               aria-label={video.title}

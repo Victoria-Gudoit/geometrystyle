@@ -1,6 +1,10 @@
 import React from "react";
 import css from "./contacts.module.css";
 import contacts from "../../img/otherkitchen.webp";
+import instagram from "../../img/instagram.png";
+import viber from "../../img/viber.png";
+import telegram from "../../img/telegram.png";
+
 
 export const Contacts = () => {
   return (
@@ -14,10 +18,13 @@ export const Contacts = () => {
           Мы здесь, чтобы удовлетворить все ваши потребности и найти лучшие
           решения!
         </p>
-        <address>
-          <a href="mailto:infostone@mail.ru">infostone@mail.ru</a> <br />
-          <a href="tel:+375295484598">+375 (29) 548-45-98</a>
+        <address className={css.address}>
+          <div>     <img src={viber} className={css.viber} alt="viber" />
+          <img src={telegram} alt="telegram" /></div>
+          +375 (44) 751-77-00 <br />
+          <a href="mailto:stilya.geometriya@mail.ru"> stilya.geometriya@mail.ru</a>
         </address>
+        <a href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv" target="_blank"><img src={instagram} alt="instagram" /></a>
       </div>
     </section>
   );
