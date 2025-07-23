@@ -17,6 +17,8 @@ export const MaterialDetail = () => {
     2: { folder: "noblle", title: "Noblle" },
     3: { folder: "caesarstone", title: "Caesarstone" },
     4: { folder: "avarus", title: "Аварус" },
+    5: { folder: "radianz", title: "Radianz" },
+
   };
 
   // Текущая папка и заголовок на основе ID
@@ -59,6 +61,13 @@ export const MaterialDetail = () => {
             /\.(png|jpe?g|webp)$/
           );
           break;
+          case "radianz":
+            requireImages = require.context(
+              "../../radianz",
+              false,
+              /\.(png|jpe?g|webp)$/
+            );
+            break;
         default:
           console.warn(`Папка ${folder} не найдена, используем avant`);
           requireImages = require.context(

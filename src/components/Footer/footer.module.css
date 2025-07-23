@@ -1,12 +1,11 @@
 .footer {
+  flex-shrink: 0; /* Футер не сжимается */
   background-color: #3b3937;
   max-height: 30rem;
-  min-height: calc(100vh - 518px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  overflow: hidden;
   padding: 3rem 0;
 }
 
@@ -22,6 +21,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 .img {
@@ -31,6 +31,10 @@
 .rights {
   text-align: center;
 }
+
+.viber {
+  margin-right: 1rem;
+  }
 
 @media (max-width: 353px) {
   .rights {

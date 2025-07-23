@@ -33,8 +33,8 @@
 }
 
 .img {
-  width: 7rem;
-  height: 7rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 .list {
@@ -93,7 +93,7 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 955px) {
   .burger {
     display: block;
   }
