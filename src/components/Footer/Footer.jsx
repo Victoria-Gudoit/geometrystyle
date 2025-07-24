@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className={css.wrapper}>
         <address className={css.contacts}>
         <div>     <img src={viber} className={css.viber} alt="viber" />
-          <img src={telegram} alt="telegram" /></div>
+        <a href="https://t.me/geometrystylequartz" target="_blank"><img src={telegram} alt="telegram" /></a>  </div>
           +375 (44) 751-77-00 <br />
           <a href="mailto:stilya.geometriya@mail.ru"> stilya.geometriya@mail.ru</a>
         </address>
