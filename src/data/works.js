@@ -16,7 +16,6 @@ import bathFour from "../img/bathroom/w_01.webp"
 import bathFive from "../img/bathroom/w_02.webp"
 
 
-
 import kitchen1 from "../img/mykichen.webp"
 import kitchen2 from "../img/kitchenOne.webp"
 import kitchen3 from "../img/kitchenTwo.webp"
