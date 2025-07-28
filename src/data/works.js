@@ -37,11 +37,11 @@ export const works = [
       description: ["Изготовлена из квацевого камня Nobble 'Bianco Gioia'", "Изготовлена из квацевого камня Stratos Milky White (матовый)", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
     },
     {
-      images: [kitchen2, kitchen3, kitchen4, kitchen5, kitchen1],
+      images: [kitchen5, kitchen2, kitchen3, kitchen4, kitchen1],
       title: "Столешницы из камня для кухни",
       id: 2,
       subtitle: "Столешницы из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к влаге, царапинам и химическим веществам, что делает их идеальными для кухонь и ванных комнат. Они долговечны, гигиеничны, не требуют сложного ухода и сохраняют эстетичный вид на десятилетия.",
-      description: ["Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Samsung Radianz Acacia", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Avant 'Статуарио'"]
+      description: ["Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Samsung Radianz Acacia", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Avant 'Статуарио'"]
     },
   
     {
