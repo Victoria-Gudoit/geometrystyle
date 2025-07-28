@@ -6,7 +6,6 @@ import workFour from "../img/reception.webp";
 
 import workSix from "../img/ourstairs.webp";
 
-import bar from "../img/bar.webp";
 import barTwo from "../img/barn.webp"
 import barThree from "../img/bar/bar1.webp"
 
@@ -59,7 +58,7 @@ export const works = [
       title: "Ресепшен из камня для вашего бизнеса",
       id: 4,
       subtitle: "Ресепшены из кварцевого агломерата стоит выбирать из-за их элегантного внешнего вида и высокой устойчивости к царапинам, пятнам и химическим воздействиям, что идеально для зон с высокой проходимостью. Они просты в уходе, долговечны и подчеркивают профессиональный имидж бизнеса.",
-      description: ["Изготовлена из квацевого камня Avant 'Аквитания Бланка'"]
+      description: ["Изготовлена из квацевого камня Noblle 'Calacatta Venato'"]
     },
     {
       images: [other, kom],
@@ -78,10 +77,10 @@ export const works = [
 
     },
     {
-      images: [bar, barTwo, barThree],
+      images: [barTwo, barThree],
       title: "Барная стойка",
       id: 7,
       subtitle: "Барные стойки из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к пятнам, царапинам и воздействию жидкостей, что делает их идеальными для интенсивного использования в барах и ресторанах. Они также отличаются долговечностью, легкостью в уходе и привлекательным дизайном, который подчеркивает стиль интерьера.",
-      description: ["Изготовлена из квацевого камня Noblle 'Calacatta Borghini'", "Изготовлена из квацевого камня Belenco 'Calacatta Venezia", "Изготовлена из квацевого камня Noblle 'Calacatta Venato'"]
+      description: ["Изготовлена из квацевого камня Belenco 'Calacatta Venezia", "Изготовлена из квацевого камня Noblle 'Calacatta Venato'"]
     },
   ];
