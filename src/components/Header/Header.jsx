@@ -4,7 +4,7 @@ import css from "./header.module.css";
 import { MyButton } from "../UI/button";
 import { Menu } from "../Menu";
 import "../Menu/menu.css";
-import logo from "../../img/logo.svg";
+import logo from "../../img/logo3.svg";
 
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -13,7 +13,6 @@ export const Header = () => {
     { value: "Наши работы", href: "/ourWorks" },
     { value: "Контакты", href: "/contacts" },
     { value: "Отзывы", href: "/reviews" },
-
   ];
 
   return (
