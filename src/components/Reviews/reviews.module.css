@@ -11,12 +11,9 @@
 
 .reviewsGrid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Базово 2–3 карточки */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  max-width: 1400px; /* Увеличена ширина для больших экранов */
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -28,24 +25,22 @@
 .reviewImage {
   width: 100%;
   height: auto;
-  max-height: 800px; /* Увеличенный размер для десктопа */
-  object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+  max-height: 800px;
+  object-fit: cover;
   display: block;
-   cursor: pointer;
+  cursor: pointer;
 }
 
-/* Планшеты (макс. ширина 1024px) — 2 фотографии в ряд */
 @media (max-width: 1024px) {
   .reviewsGrid {
-    grid-template-columns: repeat(2, 1fr); /* Ровно 2 карточки в ряд */
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 }
 
-/* Мобильные устройства (макс. ширина 600px) — 1 фотография в ряд */
 @media (max-width: 600px) {
   .reviewsGrid {
-    grid-template-columns: 1fr; /* Одна карточка в ряд */
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
@@ -54,6 +49,6 @@
   }
 
   .title {
-    font-size: 2.5rem; /* Меньший заголовок */
+    font-size: 2.5rem;
   }
 }

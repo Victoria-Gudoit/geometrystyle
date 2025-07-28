@@ -1,5 +1,5 @@
 .footer {
-  flex-shrink: 0; /* Футер не сжимается */
+  flex-shrink: 0;
   background-color: #3b3937;
   max-height: 30rem;
   display: flex;
@@ -34,7 +34,7 @@
 
 .viber {
   margin-right: 1rem;
-  }
+}
 
 @media (max-width: 353px) {
   .rights {

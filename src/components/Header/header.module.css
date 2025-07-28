@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0 1rem;
   color: #fff;
   position: fixed;
   width: 100%;
@@ -17,7 +17,6 @@
   gap: 1rem;
 }
 
-/*#926341*/
 .title {
   font-weight: bold;
   color: #dbb48a;
@@ -33,8 +32,8 @@
 }
 
 .img {
-  width: 10rem;
-  height: 10rem;
+  width: 21rem;
+  height: 21rem;
 }
 
 .list {
@@ -46,6 +45,7 @@
 .btns {
   display: flex;
   gap: 3rem;
+  padding-right: 1.3rem;
 }
 
 .items:hover {
@@ -91,9 +91,6 @@
   .header {
     padding: 1rem;
   }
-}
-
-@media (max-width: 955px) {
   .burger {
     display: block;
   }
@@ -112,10 +109,4 @@
     padding: 1rem 1.2rem;
     justify-content: flex-start;
   }
-
-  .logo {
-    padding-left: 2rem;
-  }
 }
-
-

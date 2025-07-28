@@ -17,26 +17,26 @@
 }
 
 .videoWrapper {
-  width: calc(33.333% - 2rem); /* 3 видео в ряд с учетом gap */
-  min-width: 280px; /* Минимальная ширина для маленьких экранов */
+  width: calc(33.333% - 2rem);
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease;
-  background: #fff; /* Фон для контраста */
+  background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
 
 .videoWrapper:hover {
-  transform: translateY(-5px); /* Легкий подъем вместо масштабирования */
+  transform: translateY(-5px);
 }
 
 .video {
   width: 100%;
-  max-height: 600px; /* Ограничиваем высоту */
-  object-fit: cover; /* Заполняет контейнер без искажений */
+  max-height: 600px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -54,10 +54,9 @@
   line-height: 1.5;
 }
 
-/* Для экранов ≤ 1024px (планшеты) */
 @media (max-width: 1024px) {
   .videoWrapper {
-    width: 100%; /* 2 видео в ряд */
+    width: 100%;
   }
 
   .title {
@@ -69,14 +68,13 @@
   }
 }
 
-/* Для экранов ≤ 768px (мобильные устройства) */
 @media (max-width: 768px) {
   .videoGallery {
     padding: 3rem 1rem;
   }
 
   .videoWrapper {
-    width: 100%; /* Одно видео в ряд */
+    width: 100%;
     min-width: unset;
     padding: 0.5rem;
   }
@@ -102,7 +100,6 @@
   }
 }
 
-/* Для экранов ≤ 480px (маленькие мобильные) */
 @media (max-width: 480px) {
   .videoGallery {
     padding: 2rem 0.5rem;

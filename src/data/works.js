@@ -8,10 +8,11 @@ import workSix from "../img/ourstairs.webp";
 
 import bar from "../img/bar.webp";
 import barTwo from "../img/barn.webp"
+import barThree from "../img/bar/bar1.webp"
+
 
 import workOne from "../img/bathroom.webp";
 import bathTwo from "../img/b1jpg.webp"
-import bathThree from "../img/b2.webp"
 import bathFour from "../img/bathroom/w_01.webp"
 import bathFive from "../img/bathroom/w_02.webp"
 
@@ -21,6 +22,7 @@ import kitchen1 from "../img/mykichen.webp"
 import kitchen2 from "../img/kitchenOne.webp"
 import kitchen3 from "../img/kitchenTwo.webp"
 import kitchen4 from "../img/kitchen/w_01.webp"
+import kitchen5 from "../img/kitchen/k8.webp"
 
 
 import sillOne from "../img/11.webp"
@@ -30,18 +32,18 @@ import sillThree from "../img/333.webp"
 
 export const works = [
     {
-      images: [workOne, bathTwo, bathThree, bathFour, bathFive],
+      images: [workOne, bathTwo, bathFour, bathFive],
       title: "Столешницы из камня для ванной комнаты",
       id: 1,
       subtitle: "Столешницы из кварцевого агломерата для ванных комнат стоит выбирать из-за их непористой структуры, которая предотвращает впитывание влаги и защищает от плесени и бактерий, обеспечивая гигиеничность. Они также устойчивы к косметическим средствам, царапинам и просты в уходе, сохраняя элегантный вид на долгие годы.",
-      description: ["Изготовлена из квацевого камня Nobble 'Bianco Gioia'", "Изготовлена из квацевого камня Stratos Milky White (матовый)", "Изготовлена из квацевого камня Caesarstone 'Calacatta Nuvo'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
+      description: ["Изготовлена из квацевого камня Nobble 'Bianco Gioia'", "Изготовлена из квацевого камня Stratos Milky White (матовый)", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
     },
     {
-      images: [kitchen1, kitchen2, kitchen3, kitchen4],
+      images: [kitchen2, kitchen3, kitchen4, kitchen5, kitchen1],
       title: "Столешницы из камня для кухни",
       id: 2,
       subtitle: "Столешницы из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к влаге, царапинам и химическим веществам, что делает их идеальными для кухонь и ванных комнат. Они долговечны, гигиеничны, не требуют сложного ухода и сохраняют эстетичный вид на десятилетия.",
-      description: ["Изготовлена из квацевого камня Avant 'Статуарио'", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Samsung Radianz Acacia", "Изготовлена из квацевого камня Radianz Everest White"]
+      description: ["Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Samsung Radianz Acacia", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Avant 'Статуарио'"]
     },
   
     {
@@ -76,10 +78,10 @@ export const works = [
 
     },
     {
-      images: [bar, barTwo],
+      images: [bar, barTwo, barThree],
       title: "Барная стойка",
       id: 7,
       subtitle: "Барные стойки из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к пятнам, царапинам и воздействию жидкостей, что делает их идеальными для интенсивного использования в барах и ресторанах. Они также отличаются долговечностью, легкостью в уходе и привлекательным дизайном, который подчеркивает стиль интерьера.",
-      description: ["Изготовлена из квацевого камня Noblle 'Calacatta Borghini'", "Изготовлена из квацевого камня Belenco 'Calacatta Venezia"]
+      description: ["Изготовлена из квацевого камня Noblle 'Calacatta Borghini'", "Изготовлена из квацевого камня Belenco 'Calacatta Venezia", "Изготовлена из квацевого камня Noblle 'Calacatta Venato'"]
     },
   ];
