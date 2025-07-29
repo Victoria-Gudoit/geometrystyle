@@ -19,10 +19,10 @@ export const Calculator = ({ active, setActive, playHero }) => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(
-      "service_q13205s",
+      "service_gwcv11h",
       "template_6dyvyz9",
       e.target,
-      "gzZNL7ACAv1KHV68d"
+      "m9z2BIQFHXiQ5W4hPfTD"
     );
     setActive(false);
   };
