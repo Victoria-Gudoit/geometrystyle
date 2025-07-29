@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./calculator.css";
-import emailjs from "@emailjs/browser";
 import validator from "validator";
 
 export const Calculator = ({ active, setActive, playHero }) => {
@@ -10,54 +9,69 @@ export const Calculator = ({ active, setActive, playHero }) => {
     console.log(btnDisabled);
     const email = e.target.value;
     if (validator.isEmail(email)) {
-      setBtnDisabled(!true);
+      setBtnDisabled(false);
     } else {
       setBtnDisabled(true);
     }
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      "service_gwcv11h",
-      "template_6dyvyz9",
-      e.target,
-      "m9z2BIQFHXiQ5W4hPfTD"
-    );
-    setActive(false);
+    const form = e.target;
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch("https://formspree.io/f/xdkdzjrz", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setActive(false);
+        alert("Форма успешно отправлена!");
+      } else {
+        throw new Error("Ошибка отправки формы");
+      }
+    } catch (error) {
+      console.error("Ошибка отправки:", error);
+      alert("Не удалось отправить форму. Попробуйте снова.");
+    }
   };
+
   return (
     <div
       className={active ? "modal active" : "modal"}
       onClick={() => setActive(false)}
-      
     >
       <div
         className={active ? "modal__content active" : "modal__content"}
         onClick={(e) => e.stopPropagation()}
-      > 
-      <span onClick={() => setActive(false)} class="modal__close"/>
-        <form class="form-inner" onSubmit={sendEmail}>
-          <h3 class="form-title">Рассчитать стоимость</h3>
-          <input class={btnDisabled ? "modal__email" : ""}
+      >
+        <span onClick={() => setActive(false)} className="modal__close" />
+        <form className="form-inner" onSubmit={sendEmail}>
+          <h3 className="form-title">Рассчитать стоимость</h3>
+          <input
+            className={btnDisabled ? "modal__email" : ""}
             type="text"
             name="email_from"
             id="emailFrom"
-            placeholder={`Ваша почта*`}
+            placeholder="Ваша почта*"
             onChange={(e) => validateEmail(e)}
-          />{" "}
-
+          />
           <input type="text" placeholder="Ваше имя" name="name" id="name" />
           <input type="tel" placeholder="Телефон" name="phone" id="phone" />
           <textarea
-            name="message"
-            id="message"
+            name="width"
+            id="width"
             placeholder="Ширина изделия, мм"
             rows="1"
           ></textarea>
           <textarea
-            name="message"
-            id="message"
+            name="length"
+            id="length"
             placeholder="Длина изделия, мм"
             rows="1"
           ></textarea>

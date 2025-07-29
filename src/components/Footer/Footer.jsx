@@ -13,7 +13,7 @@ export const Footer = () => {
         <div>     <img src={viber} className={css.viber} alt="viber" />
         <a href="https://t.me/geometrystylequartz" target="_blank"><img src={telegram} alt="telegram" /></a>  </div>
           +375 (44) 751-77-00 <br />
-          <a href="mailto:stilya.geometriya@mail.ru"> stilya.geometriya@mail.ru</a>
+          <a href="mailto:geometrystyle99@gmail.com"> geometrystyle99@gmail.com</a>
         </address>
         <a href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv" target="_blank"><img className={css.img} src={instagram} alt="instagram" /></a>
         <div className={css.rights}>
