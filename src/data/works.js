@@ -10,15 +10,13 @@ import barTwo from "../img/barn.webp"
 import barThree from "../img/bar/bar1.webp"
 
 
-import workOne from "../img/bathroom.webp";
-import bathTwo from "../img/b1jpg.webp"
+import workOne from "../img/bathroom/w_03.webp";
 import bathFour from "../img/bathroom/w_01.webp"
 import bathFive from "../img/bathroom/w_02.webp"
 
 
 import kitchen1 from "../img/mykichen.webp"
-import kitchen2 from "../img/kitchenOne.webp"
-import kitchen3 from "../img/kitchenTwo.webp"
+import kitchen2 from "../img/kitchen/w_02.webp"
 import kitchen4 from "../img/kitchen/w_01.webp"
 import kitchen5 from "../img/kitchen/k8.webp"
 
@@ -30,18 +28,18 @@ import sillThree from "../img/333.webp"
 
 export const works = [
     {
-      images: [workOne, bathTwo, bathFour, bathFive],
+      images: [workOne, bathFour, bathFive],
       title: "Столешницы из камня для ванной комнаты",
       id: 1,
       subtitle: "Столешницы из кварцевого агломерата для ванных комнат стоит выбирать из-за их непористой структуры, которая предотвращает впитывание влаги и защищает от плесени и бактерий, обеспечивая гигиеничность. Они также устойчивы к косметическим средствам, царапинам и просты в уходе, сохраняя элегантный вид на долгие годы.",
-      description: ["Изготовлена из квацевого камня Nobble 'Bianco Gioia'", "Изготовлена из квацевого камня Stratos Milky White (матовый)", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
+      description: ["Изготовлена из квацевого камня Belenco 'Perla White'", "Изготовлена из квацевого камня Radianz 'Everest White'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
     },
     {
-      images: [kitchen3, kitchen5, kitchen2, kitchen4, kitchen1],
+      images: [kitchen5, kitchen2, kitchen4, kitchen1],
       title: "Столешницы из камня для кухни",
       id: 2,
       subtitle: "Столешницы из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к влаге, царапинам и химическим веществам, что делает их идеальными для кухонь и ванных комнат. Они долговечны, гигиеничны, не требуют сложного ухода и сохраняют эстетичный вид на десятилетия.",
-      description: ["Изготовлена из квацевого камня Samsung Radianz Acacia", "Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Avant 'Статуарио'"]
+      description: ["Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Avant 'Статуарио'"]
     },
   
     {
