@@ -2,6 +2,11 @@
   padding: 11rem 10rem;
 }
 
+.noPadding {
+  padding-top: 3rem; 
+  padding-bottom: 0;
+}
+
 .blockone {
   display: flex;
   flex-direction: column;
@@ -47,6 +52,12 @@
   .about {
     padding: 8rem 3rem;
   }
+  .noPadding {
+    padding-top: 1rem; 
+  padding-bottom: 0;
+
+  }
+  
 
   .title {
     padding-top: 2rem;

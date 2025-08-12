@@ -3,6 +3,8 @@ import { Slider } from "./components/Slider";
 import img01 from "./img/img-01.webp";
 import img02 from "./img/img-02.webp";
 import { Reviews } from "./components/Reviews";
+import { AboutUs } from "./components/AboutUs";
+import { ProductionProcess } from "./components/Production";
 
 const swiperImages = [
   {
@@ -23,10 +25,12 @@ const swiperImages = [
   },
 ];
 
-export const MainPage = () => {
+export const MainPage = ({ isHomePage }) => {
   return (
     <div>
       <Slider swiperImages={swiperImages} />
+      <AboutUs isHomePage={true}/>
+      <ProductionProcess isHomePage={true}/>
       <Reviews/>
     </div>
   );
