@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.9a28f422.css",
-    "main.js": "/static/js/main.4d075c41.js",
+    "main.css": "/static/css/main.97c13f03.css",
+    "main.js": "/static/js/main.748723b4.js",
+    "static/media/IMG_8354.MOV": "/static/media/IMG_8354.053ba184679da346f192.MOV",
     "static/media/IMG_7679.MOV": "/static/media/IMG_7679.d051c8239d56b43da3a1.MOV",
     "static/media/IMG_7691.MOV": "/static/media/IMG_7691.e94079a17dc6c4d44142.MOV",
     "static/media/img-02.webp": "/static/media/img-02.7efd648685d6f0127836.webp",
@@ -120,8 +121,8 @@
     "static/media/R575-Красная-Поляна_ZOOM.webp": "/static/media/R575-Красная-Поляна_ZOOM.55d05e58c8bdebc2899f.webp",
     "static/media/Q718-Carrara-Moon_ZOOM.webp": "/static/media/Q718-Carrara-Moon_ZOOM.1858db4669119ae961a2.webp",
     "static/media/29.webp": "/static/media/29.2d5ab8168f63112915c5.webp",
-    "static/media/6.webp": "/static/media/6.aa3845dc5061ee642308.webp",
     "static/media/w_02.webp": "/static/media/w_02.88961a348887dcecd222.webp",
+    "static/media/6.webp": "/static/media/6.aa3845dc5061ee642308.webp",
     "static/media/26.webp": "/static/media/26.8dfc24a84ba2aa738524.webp",
     "static/media/7200 Аквитания Бланка_ZOOM.webp": "/static/media/7200 Аквитания Бланка_ZOOM.cba290e3c69166b1ce28.webp",
     "static/media/Q765 Nero Marquina_ZOOM.webp": "/static/media/Q765 Nero Marquina_ZOOM.0c1261b6f5c727621cf8.webp",
@@ -141,6 +142,7 @@
     "static/media/22.webp": "/static/media/22.71bca85f9cd7cc18a425.webp",
     "static/media/k8.webp": "/static/media/k8.6327add1174e5fc6e633.webp",
     "static/media/7400 Калакатта Дофине_ZOOM.webp": "/static/media/7400 Калакатта Дофине_ZOOM.45406c8a84bcf6b32fb8.webp",
+    "static/media/w_03.webp": "/static/media/w_03.087f952200f50da7df78.webp",
     "static/media/34.webp": "/static/media/34.939b5d1a1ed07d9ff0fd.webp",
     "static/media/barn.webp": "/static/media/barn.9042019a47b7eb2a42ee.webp",
     "static/media/7080 Калакатта Пьерфон_ZOOM.webp": "/static/media/7080 Калакатта Пьерфон_ZOOM.9084364a189e3ad754da.webp",
@@ -167,14 +169,12 @@
     "static/media/7070 Калакатта Версаль_ZOOM.webp": "/static/media/7070 Калакатта Версаль_ZOOM.b214cacbb9899a32b77a.webp",
     "static/media/56.webp": "/static/media/56.33d3b3e479871d37b28f.webp",
     "static/media/333.webp": "/static/media/333.5d3bd6c1e7f1ddc07c40.webp",
-    "static/media/bathroom.webp": "/static/media/bathroom.7f43cf4bd54099e515bd.webp",
     "static/media/10.webp": "/static/media/10.b21cfeb81a8e65ad5a5a.webp",
     "static/media/7570 Калакатта Таланс_ZOOM.webp": "/static/media/7570 Калакатта Таланс_ZOOM.8b9e8c256a737ed60803.webp",
     "static/media/42.webp": "/static/media/42.759dc6c0590ffa3c38bf.webp",
     "static/media/7560 Калакатта Альби_ZOOM.webp": "/static/media/7560 Калакатта Альби_ZOOM.96fbc8f6053c4260b3e4.webp",
     "static/media/1111 Аваллон_ZOOM.webp": "/static/media/1111 Аваллон_ZOOM.1c31c9bd6dadcef3fc9e.webp",
     "static/media/bar1.webp": "/static/media/bar1.00e13e49b6b55e6413e3.webp",
-    "static/media/b1jpg.webp": "/static/media/b1jpg.ed5afb4351fbae7831bf.webp",
     "static/media/w_01.webp": "/static/media/w_01.4239d00465af8196013d.webp",
     "static/media/27.webp": "/static/media/27.fafbb29683f1fa167f2a.webp",
     "static/media/5754-Калакатта-Вивье_ZOOM.webp": "/static/media/5754-Калакатта-Вивье_ZOOM.20aba36c0f990c737945.webp",
@@ -200,9 +200,7 @@
     "static/media/otherkitchen.webp": "/static/media/otherkitchen.bf35246121f88c565c4d.webp",
     "static/media/16.webp": "/static/media/16.d42d8c4d0fb04ca85076.webp",
     "static/media/Q117 Jade White_ZOOM.webp": "/static/media/Q117 Jade White_ZOOM.58a0eab6117386412bb0.webp",
-    "static/media/kitchenOne.webp": "/static/media/kitchenOne.8e2e16a9884ae684f40c.webp",
     "static/media/55.webp": "/static/media/55.9c0e30f5eadeece75aee.webp",
-    "static/media/kitchenTwo.webp": "/static/media/kitchenTwo.648708e5564ad7b3d840.webp",
     "static/media/ourstairs.webp": "/static/media/ourstairs.09096d556d458a052c77.webp",
     "static/media/Q707-Sahara-Noir_ZOOM.webp": "/static/media/Q707-Sahara-Noir_ZOOM.49ae885dc81e699d0412.webp",
     "static/media/9.webp": "/static/media/9.40d6e4e89a9a77889600.webp",
@@ -227,11 +225,11 @@
     "static/media/53.webp": "/static/media/53.d020c0bd717ba4bac252.webp",
     "static/media/31.webp": "/static/media/31.363fc5d87ebe41b8edf4.webp",
     "index.html": "/index.html",
-    "main.9a28f422.css.map": "/static/css/main.9a28f422.css.map",
-    "main.4d075c41.js.map": "/static/js/main.4d075c41.js.map"
+    "main.97c13f03.css.map": "/static/css/main.97c13f03.css.map",
+    "main.748723b4.js.map": "/static/js/main.748723b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a28f422.css",
-    "static/js/main.4d075c41.js"
+    "static/css/main.97c13f03.css",
+    "static/js/main.748723b4.js"
   ]
 }
