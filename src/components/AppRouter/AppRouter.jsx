@@ -9,7 +9,7 @@ export const AppRouter = () => {
         <Route
           path={route.path}
           key={route.path}
-          element={<route.component />}
+          element={<route.component isHomePage={route.path === "/"} />}
         />
       ))}
       <Route path="/*" element={<Navigate to="/" replace />} />

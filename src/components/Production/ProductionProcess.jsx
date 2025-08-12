@@ -3,7 +3,7 @@ import css from "./production.module.css";
 import { videos } from "../../data";
 import { VideoModal } from "../VideoModal";
 
-export const ProductionProcess = () => {
+export const ProductionProcess = ({ isHomePage }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -13,7 +13,7 @@ export const ProductionProcess = () => {
   };
 
   return (
-    <section className={css.main}>
+    <section className={`${css.main} ${isHomePage ? css.noPadding : ""}`}>
       <h1 className={css.title}>Процесс производства</h1>
       <div className={css.videoList}>
         {videos.map((video) => (

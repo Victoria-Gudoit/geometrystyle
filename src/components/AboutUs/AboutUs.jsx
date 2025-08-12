@@ -1,9 +1,9 @@
 import React from "react";
 import css from "./about.module.css";
 
-export const AboutUs = () => {
+export const AboutUs = ({ isHomePage }) => {
   return (
-    <section className={css.about}>
+    <section className={`${css.about} ${isHomePage ? css.noPadding : ""}`}>
       <div className={css.blockone}>
         <h1 className={css.title}>Мастерская интерьерных решений «Геометрия стиля»</h1>
         <div className={css.text}>
