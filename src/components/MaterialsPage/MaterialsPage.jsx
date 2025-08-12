@@ -4,7 +4,7 @@ import noblle from "../../noblle/Q798-Calacatta-Elegant_ZOOM.webp";
 import caesarstone from "../../caesarstone/6270 Atlantic salt_Caesarstone_zoom.webp";
 import avarus from "../../avarus/R538 Горы Кавказа_ZOOM.webp";
 import radianz from "../../radianz/4.webp";
-
+import belenco from "../../belenco/Alinda.webp";
 
 import { Link } from "react-router-dom";
 
@@ -15,6 +15,7 @@ export const MaterialsPage = () => {
     { image: caesarstone, title: "Caesarstone", id: 3 },
     { image: avarus, title: "Аварус", id: 4 },
     { image: radianz, title: "Radianz", id: 5 },
+    { image: belenco, title: "Belenco", id: 6 },
 
   ];
 
