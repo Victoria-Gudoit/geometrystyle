@@ -17,6 +17,7 @@ export const MaterialDetail = () => {
     4: { folder: "avarus", title: "Аварус" },
     5: { folder: "radianz", title: "Radianz" },
     6: { folder: "belenco", title: "Belenco" },
+    7: { folder: "stratos", title: "Stratos" },
   };
 
   const currentMaterial = materialMap[id] || {
@@ -46,6 +47,9 @@ export const MaterialDetail = () => {
         case "belenco":
           requireImages = require.context("../../belenco", false, /\.(png|jpe?g|webp)$/);
           break;
+          case "stratos":
+            requireImages = require.context("../../stratos", false, /\.(png|jpe?g|webp)$/);
+            break;
         default:
           console.warn(`Папка ${folder} не найдена, используем avant`);
           requireImages = require.context("../../avant", false, /\.(png|jpe?g|webp)$/);
@@ -84,7 +88,7 @@ export const MaterialDetail = () => {
               onClick={() => openModal(image)}
               loading="lazy"
             />
-            {currentMaterial.folder === "belenco" && (
+            {currentMaterial.folder === "belenco" || "stratos" && (
               <p className={css.imageCaption}>{image.alt}</p>
             )}
           </div>

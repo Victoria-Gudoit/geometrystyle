@@ -19,6 +19,8 @@ import kitchen1 from "../img/mykichen.webp"
 import kitchen2 from "../img/kitchen/w_02.webp"
 import kitchen4 from "../img/kitchen/w_01.webp"
 import kitchen5 from "../img/kitchen/k8.webp"
+import kitchen6 from "../img/kitchen/w_4.webp"
+
 
 
 import sillOne from "../img/11.webp"
@@ -35,11 +37,11 @@ export const works = [
       description: ["Изготовлена из квацевого камня Belenco 'Perla White'", "Изготовлена из квацевого камня Radianz 'Everest White'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
     },
     {
-      images: [kitchen5, kitchen2, kitchen4, kitchen1],
+      images: [kitchen5, kitchen2, kitchen4, kitchen1, kitchen6],
       title: "Столешницы из камня для кухни",
       id: 2,
       subtitle: "Столешницы из кварцевого агломерата стоит выбирать из-за их высокой устойчивости к влаге, царапинам и химическим веществам, что делает их идеальными для кухонь и ванных комнат. Они долговечны, гигиеничны, не требуют сложного ухода и сохраняют эстетичный вид на десятилетия.",
-      description: ["Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Avant 'Статуарио'"]
+      description: ["Изготовлена из квацевого камня Belenco Pixie Wings", "Изготовлена из квацевого камня Belenco 'Pixie Wings'", "Изготовлена из квацевого камня Radianz Everest White", "Изготовлена из квацевого камня Avant 'Статуарио'", "Изготовлена из квацевого камня Coante quartz majestic brown"]
     },
   
     {
@@ -70,7 +72,7 @@ export const works = [
       title: "Подоконник из камня",
       id: 6,
       subtitle: "Подоконники из кварцевого агломерата стоит выбирать из-за их высокой прочности, устойчивости к влаге и перепадам температур, что идеально для помещений с повышенной влажностью или частым воздействием солнца. Они не требуют сложного ухода, устойчивы к пятнам и царапинам, сохраняя эстетичный вид на долгие годы.",
-      description: ["Подоконник из квацевого камня Avant Calacatta", "Подоконник из квацевого камня Caesarstone Frosty Carrina", "Подоконник из квацевого камня Belenco Carrara Luca", "Подоконник из квацевого камня Belenco White"]
+      description: ["Подоконник из квацевого камня Avant Calacatta", "Подоконник из квацевого камня Caesarstone Frosty Carrina", "Подоконник из квацевого камня Belenco Fairy White", "Подоконник из квацевого камня Belenco White"]
 
     },
     {
