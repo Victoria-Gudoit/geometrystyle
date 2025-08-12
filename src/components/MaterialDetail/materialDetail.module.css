@@ -12,13 +12,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
 }
 
 .img {
-  width: calc(50% - 10px);
-  height: auto;
+  width: 40rem;
+  height: 25rem;
   border-radius: 10px;
   object-fit: cover;
   cursor: pointer;
@@ -29,8 +29,21 @@
   transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.imageCaption {
+  color: #000;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* @media (max-width: 768px) {
   .img {
     width: 100%;
   }
-}
+} */

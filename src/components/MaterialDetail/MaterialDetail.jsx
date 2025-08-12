@@ -8,77 +8,51 @@ export const MaterialDetail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Получаем ID материала из URL
   const { id } = useParams();
 
-  // Сопоставление ID материала с папкой и названием
   const materialMap = {
     1: { folder: "avant", title: "Avant Quartz" },
     2: { folder: "noblle", title: "Noblle" },
     3: { folder: "caesarstone", title: "Caesarstone" },
     4: { folder: "avarus", title: "Аварус" },
     5: { folder: "radianz", title: "Radianz" },
-
+    6: { folder: "belenco", title: "Belenco" },
   };
 
-  // Текущая папка и заголовок на основе ID
   const currentMaterial = materialMap[id] || {
     folder: "avant",
     title: "Avant Quartz",
   };
 
-  // Функция для загрузки изображений из указанной папки
   const loadImages = (folder) => {
     try {
       let requireImages;
-      // Используем статические пути для каждой папки
       switch (folder) {
         case "avant":
-          requireImages = require.context(
-            "../../avant", // Путь относительно MaterialDetail.js
-            false,
-            /\.(png|jpe?g|webp)$/
-          );
+          requireImages = require.context("../../avant", false, /\.(png|jpe?g|webp)$/);
           break;
         case "noblle":
-          requireImages = require.context(
-            "../../noblle",
-            false,
-            /\.(png|jpe?g|webp)$/
-          );
+          requireImages = require.context("../../noblle", false, /\.(png|jpe?g|webp)$/);
           break;
         case "caesarstone":
-          requireImages = require.context(
-            "../../caesarstone",
-            false,
-            /\.(png|jpe?g|webp)$/
-          );
+          requireImages = require.context("../../caesarstone", false, /\.(png|jpe?g|webp)$/);
           break;
         case "avarus":
-          requireImages = require.context(
-            "../../avarus",
-            false,
-            /\.(png|jpe?g|webp)$/
-          );
+          requireImages = require.context("../../avarus", false, /\.(png|jpe?g|webp)$/);
           break;
-          case "radianz":
-            requireImages = require.context(
-              "../../radianz",
-              false,
-              /\.(png|jpe?g|webp)$/
-            );
-            break;
+        case "radianz":
+          requireImages = require.context("../../radianz", false, /\.(png|jpe?g|webp)$/);
+          break;
+        case "belenco":
+          requireImages = require.context("../../belenco", false, /\.(png|jpe?g|webp)$/);
+          break;
         default:
           console.warn(`Папка ${folder} не найдена, используем avant`);
-          requireImages = require.context(
-            "../../avant",
-            false,
-            /\.(png|jpe?g|webp)$/
-          );
+          requireImages = require.context("../../avant", false, /\.(png|jpe?g|webp)$/);
       }
       const loadedImages = requireImages.keys().map((filename) => ({
-        src: requireImages(filename), // Путь к изображению
-        alt: filename.split("/").pop().split(".")[0], // Извлекаем имя файла без пути и расширения
+        src: requireImages(filename),
+        alt: filename.split("/").pop().split(".")[0], // Извлекаем имя без расширения
       }));
 
       setImages(loadedImages);
@@ -88,7 +62,6 @@ export const MaterialDetail = () => {
     }
   };
 
-  // Загружаем изображения при изменении ID
   useEffect(() => {
     loadImages(currentMaterial.folder);
   }, [currentMaterial.folder]);
@@ -103,14 +76,18 @@ export const MaterialDetail = () => {
       <h1 className={css.title}>{currentMaterial.title}</h1>
       <div className={css.container}>
         {images.map((image, index) => (
-          <img
-            key={index}
-            className={css.img}
-            src={image.src}
-            alt={image.alt}
-            onClick={() => openModal(image)}
-            loading="lazy"
-          />
+          <div key={index} className={css.imageWrapper}>
+            <img
+              className={css.img}
+              src={image.src}
+              alt={image.alt}
+              onClick={() => openModal(image)}
+              loading="lazy"
+            />
+            {currentMaterial.folder === "belenco" && (
+              <p className={css.imageCaption}>{image.alt}</p>
+            )}
+          </div>
         ))}
       </div>
       <Modal
