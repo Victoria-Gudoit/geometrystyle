@@ -4,10 +4,23 @@ import contacts from "../../img/otherkitchen.webp";
 import instagram from "../../img/instagram.png";
 import viber from "../../img/viber.png";
 import telegram from "../../img/telegram.png";
-
+import { Helmet } from "react-helmet";
 
 export const Contacts = () => {
   return (
+    <>
+    <Helmet>
+      <title>Geometry Style - Контакты | Свяжитесь с Нами</title>
+      <meta
+        name="description"
+        content="Свяжитесь с Geometry Style — мастерской интерьерных решений в Беларуси. Звоните: +375 (44) 751-77-00, пишите: geometrystyle99@gmail.com, или следите за нами в Instagram!"
+      />
+      <meta name="robots" content="index, follow" />
+      <meta
+        name="keywords"
+        content="Geometry Style, контакты, связь, интерьеры, Беларусь, столешницы, Instagram"
+      />
+    </Helmet>
     <section className={css.main}>
       <div className={css.blockone}>
         <img className={css.img} src={contacts} alt="кухня" />
@@ -27,5 +40,6 @@ export const Contacts = () => {
         <a href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv" target="_blank"><img src={instagram} alt="instagram" /></a>
       </div>
     </section>
+    </>
   );
 };

@@ -5,6 +5,7 @@ import img02 from "./img/img-02.webp";
 import { Reviews } from "./components/Reviews";
 import { AboutUs } from "./components/AboutUs";
 import { ProductionProcess } from "./components/Production";
+import { Helmet } from "react-helmet";
 
 const swiperImages = [
   {
@@ -28,6 +29,13 @@ const swiperImages = [
 export const MainPage = ({ isHomePage }) => {
   return (
     <div>
+           <Helmet>
+        <title>Geometry Style - Мастерская интерьерных решений</title>
+        <meta name="description" content="Geometry Style - производство каменных столешниц, подоконников в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="производство столешниц, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style" />
+      </Helmet>
+
       <Slider swiperImages={swiperImages} />
       <AboutUs isHomePage={true}/>
       <ProductionProcess isHomePage={true}/>

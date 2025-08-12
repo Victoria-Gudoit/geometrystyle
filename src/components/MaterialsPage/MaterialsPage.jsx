@@ -7,12 +7,12 @@ import radianz from "../../radianz/4.webp";
 import belenco from "../../belenco/Alinda.webp";
 import stratos from "../../stratos/Calacatta Classic.webp";
 
-
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export const MaterialsPage = () => {
-  const materials = [   
-     { image: avant, title: "Avant Quartz", id: 1 },
+  const materials = [
+    { image: avant, title: "Avant Quartz", id: 1 },
     { image: noblle, title: "Noblle Quartz", id: 2 },
     { image: caesarstone, title: "Caesarstone", id: 3 },
     { image: avarus, title: "Аварус", id: 4 },
@@ -22,20 +22,38 @@ export const MaterialsPage = () => {
   ];
 
   return (
-    <section className={css.main}>
-      <h1 className={css.title}>Кварц</h1>
-      <div className={css.work}>
-        {materials.map((material) => (
-          <Link key={material.id} to={`/material/${material.id}`} className={css.wrapper}>
-            <img
-              className={css.img}
-              src={material.image}
-              alt={material.title}
-            />
-            <h2 className={css.text}>{material.title}</h2>
-          </Link>
-        ))}
-      </div>
-    </section>
+    <>
+      <Helmet>
+        <title>Geometry Style - Кварцевый агломерат</title>
+        <meta
+          name="description"
+          content="Палитра кварцевого агломерата от Geometry Style: Avant Quartz, Noblle, Caesarstone и другие. Выберите идеальный вариант для вашего интерьера!"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content="Geometry Style, Геометрия стиля, кварцевые материалы, Avant Quartz, Noblle, Caesarstone, Belenco, Минск, Беларусь"
+        />
+      </Helmet>
+      <section className={css.main}>
+        <h1 className={css.title}>Кварц</h1>
+        <div className={css.work}>
+          {materials.map((material) => (
+            <Link
+              key={material.id}
+              to={`/material/${material.id}`}
+              className={css.wrapper}
+            >
+              <img
+                className={css.img}
+                src={material.image}
+                alt={material.title}
+              />
+              <h2 className={css.text}>{material.title}</h2>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
