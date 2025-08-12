@@ -1,8 +1,22 @@
 import React from "react";
 import css from "./about.module.css";
+import { Helmet } from "react-helmet";
 
 export const AboutUs = ({ isHomePage }) => {
   return (
+    <>
+    <Helmet>
+    <title>Геометрия стиля - О Нас | Столешницы из камня </title>
+    <meta
+      name="description"
+      content="Geometry Style — мастерская интерьерных решений в Беларуси. Изготовление столешниц, подоконников и барных стоек из кварцевого агломерата с гарантией качества."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="Geometry Style, Геометрия стиля, о нас, Минск, столешницы, подоконники, кварцевый агломерат, Беларусь"
+    />
+  </Helmet>
     <section className={`${css.about} ${isHomePage ? css.noPadding : ""}`}>
       <div className={css.blockone}>
         <h1 className={css.title}>Мастерская интерьерных решений «Геометрия стиля»</h1>
@@ -73,6 +87,6 @@ export const AboutUs = ({ isHomePage }) => {
           </li>
         </ul>
       </div>
-    </section>
+    </section></>
   );
 };

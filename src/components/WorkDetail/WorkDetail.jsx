@@ -4,6 +4,7 @@ import css from "./workDetail.module.css";
 import { works } from "../../data";
 import { SmallModal } from "../SmallModal";
 import { truncateText } from "../utils";
+import { Helmet } from "react-helmet";
 
 export const WorkDetail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,6 +39,19 @@ export const WorkDetail = () => {
   }
 
   return (
+    <>
+         <Helmet>
+        <title>Geometry Style - {work.title}</title>
+        <meta
+          name="description"
+          content={`Детали работы ${work.title} от Geometry Style. Интерьерные решения из кварцевого агломерата в Беларуси.`}
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content={`${work.title}, Geometry Style, столешницы, кварцевый агломерат, столешницы из камня, Беларусь, Минск`}
+        />
+      </Helmet>
     <section className={css.main}>
       <h1 className={css.title}>{work.title}</h1>
       <div className={css.subtitleWrapper}>
@@ -77,5 +91,6 @@ export const WorkDetail = () => {
         description={description}
       />
     </section>
+    </>
   );
 };

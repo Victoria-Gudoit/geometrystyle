@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import css from "./materialDetail.module.css";
 import { Modal } from "../Modal";
+import { Helmet } from "react-helmet";
 
 export const MaterialDetail = () => {
   const [images, setImages] = useState([]);
@@ -76,6 +77,19 @@ export const MaterialDetail = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>Geometry Style - {currentMaterial.title}</title>
+      <meta
+        name="description"
+        content={`Детали материала ${currentMaterial.title} от Geometry Style. Высококачественный кварцевый агломерат для ваших столешниц и подоконников!`}
+      />
+      <meta name="robots" content="index, follow" />
+      <meta
+        name="keywords"
+        content={`${currentMaterial.title}, Geometry Style, материалы, столешницы, подоконники, кварцевый агломерат, Беларусь`}
+      />
+    </Helmet>
     <section className={css.main}>
       <h1 className={css.title}>{currentMaterial.title}</h1>
       <div className={css.container}>
@@ -101,5 +115,6 @@ export const MaterialDetail = () => {
         setIsModalOpen={setIsModalOpen}
       />
     </section>
+    </>
   );
 };

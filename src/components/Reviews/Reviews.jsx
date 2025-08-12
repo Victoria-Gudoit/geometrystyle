@@ -1,18 +1,16 @@
 import React, {useState} from "react";
 import css from "./reviews.module.css";
-
 import reviewOne from "../../img/reviews/reviewOne.webp";
 import reviewTwo from "../../img/reviews/reviewTwo.webp";
 import reviewThree from "../../img/reviews/reviewThree.webp";
 import reviewFour from "../../img/reviews/reviewFour.webp";
 import { Modal } from "../Modal";
+import { Helmet } from "react-helmet";
 
-
-// Статический массив с отзывами
 const reviews = [
   {
     id: 1,
-    image: reviewThree, // Базовое изображение
+    image: reviewThree, 
   },
   {
     id: 2,
@@ -39,6 +37,19 @@ export const Reviews = () => {
   };
   
   return (
+    <>
+          <Helmet>
+        <title>Geometry Style - Отзывы Клиентов</title>
+        <meta
+          name="description"
+          content="Читайте отзывы клиентов о Geometry Style — мастерской интерьерных решений в Беларуси. Качество столешниц и услуг подтверждено!"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content="Geometry Style, отзывы клиентов, каменные столешницы, подоконники, кварцевый агломерат, Беларусь, качество"
+        />
+      </Helmet>
     <section className={css.reviewsSection}>
       <h2 className={css.title}>Отзывы наших клиентов</h2>
       <div className={css.reviewsGrid}>
@@ -60,5 +71,6 @@ export const Reviews = () => {
         setIsModalOpen={setIsModalOpen}
       />
     </section>
+    </>
   );
 };
