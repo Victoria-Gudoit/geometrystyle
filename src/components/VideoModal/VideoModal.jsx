@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import css from "./videoModal.module.css";
 
 export const VideoModal = ({
@@ -8,38 +8,70 @@ export const VideoModal = ({
   videoTitle,
   setIsModalOpen,
 }) => {
+  const videoRef = useRef(null); // Референс для видео
+
+  // Закрытие модального окна
   const closeModal = () => {
+    if (videoRef.current) {
+      videoRef.current.pause(); // Останавливаем видео
+      videoRef.current.currentTime = 0; // Сбрасываем время воспроизведения (опционально)
+    }
     setIsModalOpen(false);
   };
 
+  // Обработка клика по фону модального окна
   const handleModalClick = (e) => {
     if (e.target.classList.contains(css.modal)) {
       closeModal();
     }
   };
 
+  // Закрытие модального окна клавишей Escape
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isModalOpen) {
+        closeModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isModalOpen]);
+
+  // Управление воспроизведением видео
+  useEffect(() => {
+    if (isModalOpen && videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.error("Ошибка автозапуска видео:", error);
+      });
+    }
+  }, [isModalOpen]);
+
+  // Если модальное окно закрыто или нет videoSrc, ничего не рендерим
+  if (!isModalOpen || !videoSrc) return null;
+
   return (
-    <>
-      {isModalOpen && (
-        <div className={css.modal} onClick={handleModalClick}>
-          <span className={css.modalClose} onClick={closeModal}>
-            ×
-          </span>
-          <div className={css.modalContentWrapper}>
-            <video
-              className={css.modalVideo}
-              src={videoSrc}
-              poster={videoPoster}
-              controls
-              autoPlay
-              muted 
-              playsInline
-              aria-label={videoTitle || "Full screen video"}
-            />
-            {videoTitle && <h2 className={css.modalTitle}>{videoTitle}</h2>}
-          </div>
-        </div>
-      )}
-    </>
+    <div className={css.modal} onClick={handleModalClick}>
+      <button
+        className={css.modalClose}
+        onClick={closeModal}
+        aria-label="Закрыть модальное окно"
+        title="Закрыть"
+      >
+        ×
+      </button>
+      <div className={css.modalContentWrapper}>
+        <video
+          ref={videoRef}
+          className={css.modalVideo}
+          src={videoSrc}
+          poster={videoPoster}
+          controls
+          autoPlay
+          playsInline
+          aria-label={videoTitle || "Видео в полноэкранном режиме"}
+        />
+        {videoTitle && <h2 className={css.modalTitle}>{videoTitle}</h2>}
+      </div>
+    </div>
   );
 };

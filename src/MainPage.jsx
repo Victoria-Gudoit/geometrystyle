@@ -29,17 +29,23 @@ const swiperImages = [
 export const MainPage = ({ isHomePage }) => {
   return (
     <div>
-           <Helmet>
-        <title>Geometry Style - Мастерская интерьерных решений</title>
-        <meta name="description" content="Geometry Style - производство каменных столешниц, подоконников в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!" />
+      <Helmet>
+        <title>Столешницы из камня в Минске - Заказать каменные столешницы | Geometrystyle</title>
+        <meta
+          name="description"
+          content="Geometry Style - производство столешниц, подоконников из камня в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!"
+        />
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="производство столешниц, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style" />
+        <meta
+          name="keywords"
+          content="столешницы из камня, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style"
+        />
       </Helmet>
 
       <Slider swiperImages={swiperImages} />
-      <AboutUs isHomePage={true}/>
-      <ProductionProcess isHomePage={true}/>
-      <Reviews/>
+      <AboutUs isHomePage={true} />
+      <ProductionProcess isHomePage={true} />
+      <Reviews />
     </div>
   );
 };

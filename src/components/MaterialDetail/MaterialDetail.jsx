@@ -79,15 +79,15 @@ export const MaterialDetail = () => {
   return (
     <>
     <Helmet>
-      <title>Geometry Style - {currentMaterial.title}</title>
+      <title>Геометрия Стиля - {currentMaterial.title}</title>
       <meta
         name="description"
-        content={`Детали материала ${currentMaterial.title} от Geometry Style. Высококачественный кварцевый агломерат для ваших столешниц и подоконников!`}
+        content={`Детали материала ${currentMaterial.title} от Геометрии Стиля. Кварцевый агломерат для столешниц из камня и подоконников!`}
       />
       <meta name="robots" content="index, follow" />
       <meta
         name="keywords"
-        content={`${currentMaterial.title}, Geometry Style, материалы, столешницы, подоконники, кварцевый агломерат, Беларусь`}
+        content={`${currentMaterial.title}, Геометрия стиля материалы, столешницы из камня Минск, подоконники из камня, кварцевый агломерат, Беларусь`}
       />
     </Helmet>
     <section className={css.main}>
@@ -102,9 +102,10 @@ export const MaterialDetail = () => {
               onClick={() => openModal(image)}
               loading="lazy"
             />
-            {currentMaterial.folder === "belenco" || "stratos" && (
+
               <p className={css.imageCaption}>{image.alt}</p>
-            )}
+        
+ 
           </div>
         ))}
       </div>

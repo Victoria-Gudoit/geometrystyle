@@ -8,7 +8,7 @@ export const OurWorks = () => {
   return (
     <>
     <Helmet>
-      <title>Geometry Style - Наши Работы</title>
+      <title>Геометрия Стиля - Наши Работы</title>
       <meta
         name="description"
         content="Посмотрите наши работы от Geometry Style — столешницы, подоконники, барные стойки и другие изделия из кварцевого агломерата"
@@ -16,7 +16,7 @@ export const OurWorks = () => {
       <meta name="robots" content="index, follow" />
       <meta
         name="keywords"
-        content="Geometry Style, Геометрия стиля, Минск, наши работы, столешницы, барные стойки, кварцевый агломерат, Беларусь, дизайн"
+        content="Geometry Style, Геометрия стиля, Минск, наши работы, столешницы из камня, барные стойки из камня, кварцевый агломерат, Минск, дизайн"
       />
     </Helmet>
     <section className={css.main}>

@@ -27,7 +27,6 @@ const reviews = [
 ];
 
 export const Reviews = () => {
-  const [images, setImages] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -39,7 +38,7 @@ export const Reviews = () => {
   return (
     <>
           <Helmet>
-        <title>Geometry Style - Отзывы Клиентов</title>
+        <title>Geometry Style - Столешницы из камння</title>
         <meta
           name="description"
           content="Читайте отзывы клиентов о Geometry Style — мастерской интерьерных решений в Беларуси. Качество столешниц и услуг подтверждено!"
@@ -47,7 +46,7 @@ export const Reviews = () => {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Geometry Style, отзывы клиентов, каменные столешницы, подоконники, кварцевый агломерат, Беларусь, качество"
+          content="Geometry Style, отзывы клиентов, каменные столешницы, каменные подоконники, кварцевый агломерат, Беларусь, качество"
         />
       </Helmet>
     <section className={css.reviewsSection}>

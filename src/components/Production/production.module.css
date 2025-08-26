@@ -69,7 +69,7 @@
   }
 
   .video {
-    max-height: 250px;
+    max-height: 700px;
   }
 }
 
@@ -97,7 +97,7 @@
   }
 
   .video {
-    max-height: 200px;
+    max-height: 500px;
   }
 
   .videoList {
@@ -119,7 +119,7 @@
   }
 
   .video {
-    max-height: 180px;
+    max-height: 250px;
   }
 
   .videoTitle {

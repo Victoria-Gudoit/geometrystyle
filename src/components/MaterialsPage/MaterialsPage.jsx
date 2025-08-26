@@ -1,9 +1,9 @@
 import css from "../OurWorks/works.module.css";
-import avant from "../../avant/7060 Калакатта Мон Сен-Мишель_ZOOM_2025.webp";
-import noblle from "../../noblle/Q798-Calacatta-Elegant_ZOOM.webp";
-import caesarstone from "../../caesarstone/6270 Atlantic salt_Caesarstone_zoom.webp";
-import avarus from "../../avarus/R538 Горы Кавказа_ZOOM.webp";
-import radianz from "../../radianz/4.webp";
+import avant from "../../avant/7060 Калакатта Мон Сен-Мишель.webp";
+import noblle from "../../noblle/Q798 Calacatta Elegant.webp";
+import caesarstone from "../../caesarstone/6270 Atlantic salt.webp";
+import avarus from "../../avarus/R538 Горы Кавказа.webp";
+import radianz from "../../radianz/Aster.webp";
 import belenco from "../../belenco/Alinda.webp";
 import stratos from "../../stratos/Calacatta Classic.webp";
 

@@ -18,7 +18,7 @@ export const Contacts = () => {
       <meta name="robots" content="index, follow" />
       <meta
         name="keywords"
-        content="Geometry Style, контакты, связь, интерьеры, Беларусь, столешницы, Instagram"
+        content="Geometry Style, контакты, связь, столешницы из камня Минск, Беларусь, подоконники из камня, Instagram"
       />
     </Helmet>
     <section className={css.main}>
