@@ -58,9 +58,8 @@ export const ProductionProcess = ({ isHomePage }) => {
             <div
               key={video.id}
               className={css.videoWrapper}
-              onClick={() => openModal(video)}
             >
-              <video muted
+              <video 
                 className={css.video}
                 ref={(el) => (videoRefs.current[index] = el)} // Привязываем референс
                 src={video.src}
@@ -70,7 +69,7 @@ export const ProductionProcess = ({ isHomePage }) => {
                 playsInline
                 aria-label={video.title}
               />
-              <h2 className={css.videoTitle}>{video.title}</h2>
+              <h2  onClick={() => openModal(video)} className={css.videoTitle}>{video.title}</h2>
               <p className={css.videoDescription}>{video.description}</p>
             </div>
           ))}

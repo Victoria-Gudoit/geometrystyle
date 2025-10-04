@@ -6,6 +6,7 @@ import { Reviews } from "./components/Reviews";
 import { AboutUs } from "./components/AboutUs";
 import { ProductionProcess } from "./components/Production";
 import { Helmet } from "react-helmet";
+import { OurWorks } from "./components/OurWorks";
 
 const swiperImages = [
   {
@@ -44,8 +45,10 @@ export const MainPage = ({ isHomePage }) => {
 
       <Slider swiperImages={swiperImages} />
       <AboutUs isHomePage={true} />
-      <ProductionProcess isHomePage={true} />
       <Reviews />
+      <OurWorks isHomePage={true}/>
+      <ProductionProcess isHomePage={true}/>
+      
     </div>
   );
 };

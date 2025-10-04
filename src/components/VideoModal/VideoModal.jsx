@@ -1,32 +1,24 @@
 import React, { useRef, useEffect } from "react";
-import css from "./videoModal.module.css";
-
-export const VideoModal = ({
+import css from "./videoModal.module.css";export const VideoModal = ({
   isModalOpen,
   videoSrc,
   videoPoster,
   videoTitle,
   setIsModalOpen,
 }) => {
-  const videoRef = useRef(null); // Референс для видео
-
-  // Закрытие модального окна
+  const videoRef = useRef(null); // Референс для видео  // Закрытие модального окна
   const closeModal = () => {
     if (videoRef.current) {
       videoRef.current.pause(); // Останавливаем видео
       videoRef.current.currentTime = 0; // Сбрасываем время воспроизведения (опционально)
     }
     setIsModalOpen(false);
-  };
-
-  // Обработка клика по фону модального окна
+  };  // Обработка клика по фону модального окна
   const handleModalClick = (e) => {
     if (e.target.classList.contains(css.modal)) {
       closeModal();
     }
-  };
-
-  // Закрытие модального окна клавишей Escape
+  };  // Закрытие модального окна клавишей Escape
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape" && isModalOpen) {
@@ -35,21 +27,15 @@ export const VideoModal = ({
     };
     document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
-  }, [isModalOpen]);
-
-  // Управление воспроизведением видео
+  }, [isModalOpen]);  // Управление воспроизведением видео
   useEffect(() => {
     if (isModalOpen && videoRef.current) {
       videoRef.current.play().catch((error) => {
         console.error("Ошибка автозапуска видео:", error);
       });
     }
-  }, [isModalOpen]);
-
-  // Если модальное окно закрыто или нет videoSrc, ничего не рендерим
-  if (!isModalOpen || !videoSrc) return null;
-
-  return (
+  }, [isModalOpen]);  // Если модальное окно закрыто или нет videoSrc, ничего не рендерим
+  if (!isModalOpen || !videoSrc) return null;  return (
     <div className={css.modal} onClick={handleModalClick}>
       <button
         className={css.modalClose}
@@ -75,3 +61,4 @@ export const VideoModal = ({
     </div>
   );
 };
+

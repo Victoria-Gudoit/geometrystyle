@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { works } from "../../data";
 import { Helmet } from "react-helmet";
 
-export const OurWorks = () => {
+export const OurWorks = ({isHomePage}) => {
   return (
     <>
     <Helmet>
@@ -19,8 +19,8 @@ export const OurWorks = () => {
         content="Geometry Style, Геометрия стиля, Минск, наши работы, столешницы из камня, барные стойки из камня, кварцевый агломерат, Минск, дизайн"
       />
     </Helmet>
-    <section className={css.main}>
-      <h1 className={css.title}>Наши работ</h1>
+    <section className={`${css.main} ${isHomePage ? css.noPadding : ""}`}>
+      <h1 className={css.title}>Наши работы</h1>
       <div className={css.work}>
         {works.map((work) => (
           <Link

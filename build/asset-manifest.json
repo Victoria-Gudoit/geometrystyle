@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b2c05172.css",
-    "main.js": "/static/js/main.8d9f3a62.js",
+    "main.js": "/static/js/main.47f7e4d1.js",
     "static/media/IMG_8354.MOV": "/static/media/IMG_8354.053ba184679da346f192.MOV",
     "static/media/IMG_7679.MOV": "/static/media/IMG_7679.d051c8239d56b43da3a1.MOV",
     "static/media/w_4.webp": "/static/media/w_4.548e30ba25ce59cf8c4c.webp",
@@ -118,6 +118,7 @@
     "static/media/Mariposa Buff.webp": "/static/media/Mariposa Buff.11f9fd5b11d66e402794.webp",
     "static/media/Wilshire Amber.webp": "/static/media/Wilshire Amber.db0589292264df0e5001.webp",
     "static/media/5751 Калакатта Бессон.webp": "/static/media/5751 Калакатта Бессон.7cb7eb044e51dbf0492e.webp",
+    "static/media/w_05.webp": "/static/media/w_05.a7046d9f3ad5f351efd2.webp",
     "static/media/7970 Калакатта Труа.webp": "/static/media/7970 Калакатта Труа.2fadff6030d14041afe1.webp",
     "static/media/Q717 Bianco Gioia.webp": "/static/media/Q717 Bianco Gioia.df0b4c0da000a1882221.webp",
     "static/media/R522 Золотое кольцо.webp": "/static/media/R522 Золотое кольцо.0dace0b056097ae540e5.webp",
@@ -197,6 +198,7 @@
     "static/media/7070 Калакатта Версаль.webp": "/static/media/7070 Калакатта Версаль.b214cacbb9899a32b77a.webp",
     "static/media/Ashen.webp": "/static/media/Ashen.6d93329c6d91cf83fcd5.webp",
     "static/media/333.webp": "/static/media/333.5d3bd6c1e7f1ddc07c40.webp",
+    "static/media/w_04.webp": "/static/media/w_04.7539d5f06413f7c74a51.webp",
     "static/media/Aizano.webp": "/static/media/Aizano.e448dabbd0a0d467d1f5.webp",
     "static/media/Nimbus.webp": "/static/media/Nimbus.f59f4c6c68a62bfb4666.webp",
     "static/media/Impala Black.webp": "/static/media/Impala Black.b21cfeb81a8e65ad5a5a.webp",
@@ -330,10 +332,10 @@
     "static/media/Nocciola.webp": "/static/media/Nocciola.c6aac68a4a89d68a0972.webp",
     "index.html": "/index.html",
     "main.b2c05172.css.map": "/static/css/main.b2c05172.css.map",
-    "main.8d9f3a62.js.map": "/static/js/main.8d9f3a62.js.map"
+    "main.47f7e4d1.js.map": "/static/js/main.47f7e4d1.js.map"
   },
   "entrypoints": [
     "static/css/main.b2c05172.css",
-    "static/js/main.8d9f3a62.js"
+    "static/js/main.47f7e4d1.js"
   ]
 }
