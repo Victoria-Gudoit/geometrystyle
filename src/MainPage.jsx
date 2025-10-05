@@ -31,7 +31,10 @@ export const MainPage = ({ isHomePage }) => {
   return (
     <div>
       <Helmet>
-        <title>Столешницы из камня в Минске - Заказать каменные столешницы | Geometrystyle</title>
+        <title>
+          Столешницы из камня в Минске - Заказать каменные столешницы |
+          Geometrystyle
+        </title>
         <meta
           name="description"
           content="Geometry Style - производство столешниц, подоконников из камня в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!"
@@ -46,9 +49,8 @@ export const MainPage = ({ isHomePage }) => {
       <Slider swiperImages={swiperImages} />
       <AboutUs isHomePage={true} />
       <Reviews />
-      <OurWorks isHomePage={true}/>
-      <ProductionProcess isHomePage={true}/>
-      
+      <OurWorks isHomePage={true} />
+      <ProductionProcess isHomePage={true} />
     </div>
   );
 };

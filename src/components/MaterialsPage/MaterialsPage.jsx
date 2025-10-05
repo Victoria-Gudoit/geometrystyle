@@ -6,7 +6,6 @@ import avarus from "../../avarus/R538 Горы Кавказа.webp";
 import radianz from "../../radianz/Aster.webp";
 import belenco from "../../belenco/Alinda.webp";
 import stratos from "../../stratos/Calacatta Classic.webp";
-
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
