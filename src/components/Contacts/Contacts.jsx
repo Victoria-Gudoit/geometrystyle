@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./contacts.module.css";
-import contacts from "../../img/otherkitchen.webp";
+import contacts from "../../img/contacts.webp";
 import instagram from "../../img/instagram.png";
 import viber from "../../img/viber.png";
 import telegram from "../../img/telegram.png";
@@ -37,7 +37,10 @@ export const Contacts = () => {
           +375 (44) 751-77-00 <br />
           <a href="mailto:geometrystyle99@gmail.com"> geometrystyle99@gmail.com</a>
         </address>
+        <div className={css.insta}>
         <a href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv" target="_blank"><img src={instagram} alt="instagram" /></a>
+        <p>@geometrystyle.by</p>
+        </div>
       </div>
     </section>
     </>

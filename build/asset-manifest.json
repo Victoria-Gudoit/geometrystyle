@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4aa5e8ff.css",
-    "main.js": "/static/js/main.d4d6472a.js",
+    "main.css": "/static/css/main.c07ab4ba.css",
+    "main.js": "/static/js/main.88c62f0d.js",
     "static/media/process1.MOV": "/static/media/process1.95f67ccd9f808467b257.MOV",
     "static/media/process3.MOV": "/static/media/process3.8e18446f68456aff1e9c.MOV",
     "static/media/process2.MOV": "/static/media/process2.65100a239b6283f65156.MOV",
@@ -224,6 +224,7 @@
     "static/media/Kauai Cream.webp": "/static/media/Kauai Cream.1ff1f96b4aba07250c41.webp",
     "static/media/reception.webp": "/static/media/reception.09a1f39a2f9e4762f71e.webp",
     "static/media/Hypnose.webp": "/static/media/Hypnose.743e7f9fe720b5fee096.webp",
+    "static/media/contacts.webp": "/static/media/contacts.0282e40f5a669a7bba79.webp",
     "static/media/Q921 Arabescato Black.webp": "/static/media/Q921 Arabescato Black.21b7be2019dc750af8a5.webp",
     "static/media/Metropol Gray.webp": "/static/media/Metropol Gray.e8c2b39d88e8a767320b.webp",
     "static/media/Volcano Black.webp": "/static/media/Volcano Black.e06f9dbf200d3e922865.webp",
@@ -264,7 +265,6 @@
     "static/media/Mario.webp": "/static/media/Mario.d6a950b51cf5fb066032.webp",
     "static/media/Willow.webp": "/static/media/Willow.5ee1779d8c477711c95f.webp",
     "static/media/Elixir White.webp": "/static/media/Elixir White.8702ab16604a17060e54.webp",
-    "static/media/otherkitchen.webp": "/static/media/otherkitchen.bf35246121f88c565c4d.webp",
     "static/media/Pristin.webp": "/static/media/Pristin.d42d8c4d0fb04ca85076.webp",
     "static/media/Star dust.webp": "/static/media/Star dust.e5935379114e8cd38421.webp",
     "static/media/Q117 Jade White.webp": "/static/media/Q117 Jade White.58a0eab6117386412bb0.webp",
@@ -340,11 +340,11 @@
     "static/media/ForzaFume.webp": "/static/media/ForzaFume.db0953333c9cf3b30c26.webp",
     "static/media/Nocciola.webp": "/static/media/Nocciola.c6aac68a4a89d68a0972.webp",
     "index.html": "/index.html",
-    "main.4aa5e8ff.css.map": "/static/css/main.4aa5e8ff.css.map",
-    "main.d4d6472a.js.map": "/static/js/main.d4d6472a.js.map"
+    "main.c07ab4ba.css.map": "/static/css/main.c07ab4ba.css.map",
+    "main.88c62f0d.js.map": "/static/js/main.88c62f0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.4aa5e8ff.css",
-    "static/js/main.d4d6472a.js"
+    "static/css/main.c07ab4ba.css",
+    "static/js/main.88c62f0d.js"
   ]
 }
