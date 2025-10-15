@@ -48,7 +48,7 @@ export const Reviews = () => {
   return (
     <>
       <Helmet>
-        <title>Geometry Style - Столешницы из камня</title>
+        <title>Отзывы наших клиентов</title>
         <meta
           name="description"
           content="Читайте отзывы клиентов о Geometry Style — мастерской интерьерных решений в Беларуси. Качество столешниц и услуг подтверждено!"

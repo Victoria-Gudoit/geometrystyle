@@ -59,8 +59,7 @@ export const ProductionProcess = ({ isHomePage }) => {
                 controls
                 loop
                 playsInline
-                aria-label={video.title}
-              />
+                aria-label={video.title}/>
               <h2 onClick={() => openModal(video)} className={css.videoTitle}>
                 {video.title}
               </h2>

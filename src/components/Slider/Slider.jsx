@@ -1,10 +1,4 @@
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import cssBtn from "../../components/UI/button/MyButton.module.css";
 import cssMain from "../../style.module.css";
@@ -49,12 +43,14 @@ export const Slider = ({ swiperImages }) => {
   };
 
   const pauseHero = () => {
-    heroSwiper.autoplay.stop();
+    if (heroSwiper?.autoplay) {
+      heroSwiper.autoplay.stop();
+    }
   };
+
   return (
     <section className="wrapper">
       <Swiper
-        ref={heroSwiper}
         modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
         autoplay={{
           delay: 5200,
@@ -65,29 +61,32 @@ export const Slider = ({ swiperImages }) => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={setSwiperRef}
-        onSlideChange={() => console.log("slide change")}
+        onSlideChange={() => {
+          setModalActive(false); 
+        }}
       >
-        {swiperImages.map((swiperImage) => (
-          <SwiperSlide key={swiperImage.image}>
+        {swiperImages.map((swiperImage, index) => (
+          <SwiperSlide key={swiperImage.image || index}>
             <img className="img" src={swiperImage.image} alt="" />
             <span className={circleClasses}></span>
-            <h1 className={titleClasses}>Мастерская <br /> интерьерных решений</h1>
+            <h1 className={titleClasses}>
+              Мастерская <br /> интерьерных решений
+            </h1>
             <span className={subTitleClasses}>{swiperImage.subtitle}</span>
             <MyButton
               to={`/${swiperImage.path}`}
               className={btnClasses}
-              onClick={openModal}
+              onClick={(e) => {
+                openModal(e);
+              }}
               onPointerUp={pauseHero}
             >
               {swiperImage.btn}
             </MyButton>
-            <Calculator
-              active={modalActive}
-              setActive={setModalActive}
-            />
           </SwiperSlide>
         ))}
       </Swiper>
+      <Calculator active={modalActive} setActive={setModalActive} />
     </section>
   );
 };
