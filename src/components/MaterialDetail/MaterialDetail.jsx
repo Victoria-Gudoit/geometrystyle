@@ -31,33 +31,65 @@ export const MaterialDetail = () => {
       let requireImages;
       switch (folder) {
         case "avant":
-          requireImages = require.context("../../avant", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../avant",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
           break;
         case "noblle":
-          requireImages = require.context("../../noblle", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../noblle",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
           break;
         case "caesarstone":
-          requireImages = require.context("../../caesarstone", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../caesarstone",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
           break;
         case "avarus":
-          requireImages = require.context("../../avarus", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../avarus",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
           break;
         case "radianz":
-          requireImages = require.context("../../radianz", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../radianz",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
           break;
         case "belenco":
-          requireImages = require.context("../../belenco", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../belenco",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
           break;
-          case "stratos":
-            requireImages = require.context("../../stratos", false, /\.(png|jpe?g|webp)$/);
-            break;
+        case "stratos":
+          requireImages = require.context(
+            "../../stratos",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
+          break;
         default:
           console.warn(`Папка ${folder} не найдена, используем avant`);
-          requireImages = require.context("../../avant", false, /\.(png|jpe?g|webp)$/);
+          requireImages = require.context(
+            "../../avant",
+            false,
+            /\.(png|jpe?g|webp)$/
+          );
       }
       const loadedImages = requireImages.keys().map((filename) => ({
         src: requireImages(filename),
-        alt: filename.split("/").pop().split(".")[0], // Извлекаем имя без расширения
+        alt: filename.split("/").pop().split(".")[0],
       }));
 
       setImages(loadedImages);
@@ -78,43 +110,42 @@ export const MaterialDetail = () => {
 
   return (
     <>
-    <Helmet>
-      <title>Geometry Style - {currentMaterial.title}</title>
-      <meta
-        name="description"
-        content={`Детали материала ${currentMaterial.title} от Geometry Style. Высококачественный кварцевый агломерат для ваших столешниц и подоконников!`}
-      />
-      <meta name="robots" content="index, follow" />
-      <meta
-        name="keywords"
-        content={`${currentMaterial.title}, Geometry Style, материалы, столешницы, подоконники, кварцевый агломерат, Беларусь`}
-      />
-    </Helmet>
-    <section className={css.main}>
-      <h1 className={css.title}>{currentMaterial.title}</h1>
-      <div className={css.container}>
-        {images.map((image, index) => (
-          <div key={index} className={css.imageWrapper}>
-            <img
-              className={css.img}
-              src={image.src}
-              alt={image.alt}
-              onClick={() => openModal(image)}
-              loading="lazy"
-            />
-            {currentMaterial.folder === "belenco" || "stratos" && (
+      <Helmet>
+        <title>Геометрия Стиля - {currentMaterial.title}</title>
+        <meta
+          name="description"
+          content={`Детали материала ${currentMaterial.title} от Геометрии Стиля. Кварцевый агломерат для столешниц из камня и подоконников!`}
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="keywords"
+          content={`${currentMaterial.title}, Геометрия стиля материалы, столешницы из камня Минск, подоконники из камня, кварцевый агломерат, Беларусь`}
+        />
+      </Helmet>
+      <section className={css.main}>
+        <h1 className={css.title}>{currentMaterial.title}</h1>
+        <div className={css.container}>
+          {images.map((image, index) => (
+            <div key={index} className={css.imageWrapper}>
+              <img
+                className={css.img}
+                src={image.src}
+                alt={image.alt}
+                onClick={() => openModal(image)}
+                loading="lazy"
+              />
+
               <p className={css.imageCaption}>{image.alt}</p>
-            )}
-          </div>
-        ))}
-      </div>
-      <Modal
-        isModalOpen={isModalOpen}
-        selectedImage={selectedImage}
-        setSelectedImage={setSelectedImage}
-        setIsModalOpen={setIsModalOpen}
-      />
-    </section>
+            </div>
+          ))}
+        </div>
+        <Modal
+          isModalOpen={isModalOpen}
+          selectedImage={selectedImage}
+          setSelectedImage={setSelectedImage}
+          setIsModalOpen={setIsModalOpen}
+        />
+      </section>
     </>
   );
 };

@@ -6,6 +6,7 @@ import { Reviews } from "./components/Reviews";
 import { AboutUs } from "./components/AboutUs";
 import { ProductionProcess } from "./components/Production";
 import { Helmet } from "react-helmet";
+import { OurWorks } from "./components/OurWorks";
 
 const swiperImages = [
   {
@@ -29,17 +30,26 @@ const swiperImages = [
 export const MainPage = ({ isHomePage }) => {
   return (
     <div>
-           <Helmet>
-        <title>Geometry Style - Мастерская интерьерных решений</title>
-        <meta name="description" content="Geometry Style - производство каменных столешниц, подоконников в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!" />
+      <Helmet>
+        <title>
+        Столешницы из камня в Минске | Geometry Style - Заказ и Производство
+        </title>
+        <meta
+          name="description"
+          content="Geometry Style - производство столешниц, подоконников из камня в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!"
+        />
         <meta name="robots" content="index, follow" />
-        <meta name="keywords" content="производство столешниц, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style" />
+        <meta
+          name="keywords"
+          content="Geometry Style, процесс производства, столешницы из камня, кварцевый агломерат, каменные подоконники Минск, технологии"
+        />
       </Helmet>
 
       <Slider swiperImages={swiperImages} />
-      <AboutUs isHomePage={true}/>
-      <ProductionProcess isHomePage={true}/>
-      <Reviews/>
+      <AboutUs isHomePage={true} />
+      <Reviews />
+      <OurWorks isHomePage={true} />
+      <ProductionProcess isHomePage={true} />
     </div>
   );
 };

@@ -41,7 +41,7 @@ export const WorkDetail = () => {
   return (
     <>
          <Helmet>
-        <title>Geometry Style - {work.title}</title>
+        <title>Геометрия Стиля - {work.title}</title>
         <meta
           name="description"
           content={`Детали работы ${work.title} от Geometry Style. Интерьерные решения из кварцевого агломерата в Беларуси.`}
@@ -49,7 +49,7 @@ export const WorkDetail = () => {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content={`${work.title}, Geometry Style, столешницы, кварцевый агломерат, столешницы из камня, Беларусь, Минск`}
+          content={`${work.title}, Geometry Style, столешницы из камня Минск, кварцевый агломерат, подоконники из камня, Беларусь, Минск`}
         />
       </Helmet>
     <section className={css.main}>

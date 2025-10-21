@@ -1,0 +1,53 @@
+.thankYouContainer {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    margin: 230px auto;
+    animation: thankYouFadeIn 1s ease-in-out;
+    background: linear-gradient(135deg, #f5f7fa, #e4e7eb);
+  }
+  
+  .thankYouTitle {
+    color: #333333;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .thankYouMessage {
+    color: #666666;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .thankYouButton {
+    background: #667eea;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .thankYouButton:hover {
+    background: #764ba2;
+  }
+  
+  @keyframes thankYouFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

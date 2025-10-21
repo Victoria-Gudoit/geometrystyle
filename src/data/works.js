@@ -13,6 +13,10 @@ import barThree from "../img/bar/bar1.webp"
 import workOne from "../img/bathroom/w_03.webp";
 import bathFour from "../img/bathroom/w_01.webp"
 import bathFive from "../img/bathroom/w_02.webp"
+import bathSix from "../img/bathroom/w_04.webp"
+import bathSeven from "../img/bathroom/w_05.webp"
+import bathEight from "../img/bathroom/w_06.webp"
+import bathNine from "../img/bathroom/w_07.webp"
 
 
 import kitchen1 from "../img/mykichen.webp"
@@ -30,11 +34,11 @@ import sillThree from "../img/333.webp"
 
 export const works = [
     {
-      images: [workOne, bathFour, bathFive],
+      images: [workOne, bathFour, bathFive, bathSeven, bathSix, bathEight, bathNine],
       title: "Столешницы из камня для ванной комнаты",
       id: 1,
       subtitle: "Столешницы из кварцевого агломерата для ванных комнат стоит выбирать из-за их непористой структуры, которая предотвращает впитывание влаги и защищает от плесени и бактерий, обеспечивая гигиеничность. Они также устойчивы к косметическим средствам, царапинам и просты в уходе, сохраняя элегантный вид на долгие годы.",
-      description: ["Изготовлена из квацевого камня Belenco 'Perla White'", "Изготовлена из квацевого камня Radianz 'Everest White'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'"]
+      description: ["Изготовлена из квацевого камня Belenco 'Perla White'", "Изготовлена из квацевого камня Radianz 'Everest White'", "Изготовлена из квацевого камня Stratos 'C7109 Cloud Concrete'", "Изготовлена из квацевого камня Belenco 'Chakra Beige'", "Изготовлена из квацевого камня Radianz 'Everest White'", "Изготовлена из квацевого камня Stratos 'Milky White'", "Изготовлена из квацевого камня Stratos 'Milky White'"]
     },
     {
       images: [kitchen5, kitchen2, kitchen4, kitchen1, kitchen6],
