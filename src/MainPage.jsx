@@ -32,8 +32,7 @@ export const MainPage = ({ isHomePage }) => {
     <div>
       <Helmet>
         <title>
-          Столешницы из камня в Минске - Заказать каменные столешницы |
-          Geometrystyle
+        Столешницы из камня в Минске | Geometry Style - Заказ и Производство
         </title>
         <meta
           name="description"
@@ -42,7 +41,7 @@ export const MainPage = ({ isHomePage }) => {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="столешницы из камня, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style"
+          content="Geometry Style, процесс производства, столешницы из камня, кварцевый агломерат, каменные подоконники Минск, технологии"
         />
       </Helmet>
 

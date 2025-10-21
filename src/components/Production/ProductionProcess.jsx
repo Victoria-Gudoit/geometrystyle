@@ -43,7 +43,7 @@ export const ProductionProcess = ({ isHomePage }) => {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Geometry Style, процесс производства, столешницы из камня, кварцевый агломерат, каменные подоконники Минск, технологии"
+          content="столешницы из камня, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style"
         />
       </Helmet>
       <section className={`${css.main} ${isHomePage ? css.noPadding : ""}`}>

@@ -8,6 +8,7 @@ import { WorkDetail } from "../components/WorkDetail";
 import { ProductionProcess } from "../components/Production";
 import { Reviews } from "../components/Reviews";
 import { ThankYouPage } from "../components/ThankYou";
+import { NotFound } from "../components/NotFound";
 
 export const routes = [
   { path: "/", component: MainPage },
@@ -20,5 +21,7 @@ export const routes = [
   { path: "work/:id", component: WorkDetail },
   { path: "reviews", component: Reviews },
   { path: "thank-you", component: ThankYouPage },
+  { path: "*", component: NotFound },
+
 
 ];
