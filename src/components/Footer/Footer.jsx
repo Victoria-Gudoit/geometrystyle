@@ -3,12 +3,24 @@ import css from "./footer.module.css";
 import instagram from "../../img/instagram.png";
 import viber from "../../img/viber.png";
 import telegram from "../../img/telegram.png";
+import { Link } from "react-router-dom";
+import { items } from "../Header/Header";
 
 
 export const Footer = () => {
   return (
     <footer className={css.footer}>
       <div className={css.wrapper}>
+      <nav>
+        <ul className={css.list}>
+          {" "}
+          {items.map((item) => (
+            <li key={item.href} className={css.items}>
+              <Link to={item.href}>{item.value}</Link>
+            </li>
+          ))}
+        </ul>{" "}
+      </nav>
         <address className={css.contacts}>
         <div>     <img src={viber} className={css.viber} alt="viber" />
         <a href="https://t.me/geometrystylequartz" target="_blank"><img src={telegram} alt="telegram" /></a>  </div>

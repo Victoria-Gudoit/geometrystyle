@@ -4,7 +4,7 @@ import css from "./workDetail.module.css";
 import { works } from "../../data";
 import { SmallModal } from "../SmallModal";
 import { truncateText } from "../utils";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export const WorkDetail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,10 +41,14 @@ export const WorkDetail = () => {
   return (
     <>
          <Helmet>
+         <link
+          rel="canonical"
+          href={`https://geometrystyle.by/work/${id}/`}
+        />
         <title>Геометрия Стиля - {work.title}</title>
         <meta
           name="description"
-          content={`Детали работы ${work.title} от Geometry Style. Интерьерные решения из кварцевого агломерата в Беларуси.`}
+          content={`Ознакомьтесь с деталями работы ${work.title} от Geometry Style. Интерьерные решения из кварцевого агломерата в Беларуси.`}
         />
         <meta name="robots" content="index, follow" />
         <meta

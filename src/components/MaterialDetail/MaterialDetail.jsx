@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import css from "./materialDetail.module.css";
 import { Modal } from "../Modal";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export const MaterialDetail = () => {
   const [images, setImages] = useState([]);
@@ -111,10 +111,14 @@ export const MaterialDetail = () => {
   return (
     <>
       <Helmet>
+        <link
+          rel="canonical"
+          href={`https://geometrystyle.by/material/${id}/`}
+        />
         <title>Геометрия Стиля - {currentMaterial.title}</title>
         <meta
           name="description"
-          content={`Детали материала ${currentMaterial.title} от Геометрии Стиля. Кварцевый агломерат для столешниц из камня и подоконников!`}
+          content={`Ознакомьтесь с материалом ${currentMaterial.title} от Geometry Style для столешниц и подоконников из кварцевого агломерата в Минске.`}
         />
         <meta name="robots" content="index, follow" />
         <meta

@@ -1,12 +1,13 @@
 import React from "react";
 import css from "./about.module.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
-export const AboutUs = ({ isHomePage }) => {
+export const AboutUs = () => {
   return (
     <>
     <Helmet>
-    <title>Геометрия стиля - О Нас | Столешницы из кварца </title>
+    <link rel="canonical" href="https://geometrystyle.by/aboutUs/" />
+    <title>Геометрия стиля - О Нас </title>
     <meta
       name="description"
       content="Geometry Style — мастерская интерьерных решений в Беларуси. Изготовление столешниц, подоконников и барных стоек из кварца с гарантией качества."
@@ -16,8 +17,28 @@ export const AboutUs = ({ isHomePage }) => {
       name="keywords"
       content="Geometry Style, Геометрия стиля, о нас, Минск, столешницы из камня, подоконники из камня, кварцевый агломерат, Беларусь"
     />
+                            <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Главная",
+                  item: "https://geometrystyle.by/"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "О нас",
+                  item: "https://geometrystyle.by/aboutUs/"
+                }
+              ]
+            })}
+          </script>
   </Helmet>
-    <section className={`${css.about} ${isHomePage ? css.noPadding : ""}`}>
+    <section className={css.about}>
       <div className={css.blockone}>
         <h1 className={css.title}>Мастерская интерьерных решений «Геометрия стиля»</h1>
         <div className={css.text}>

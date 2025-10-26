@@ -7,7 +7,7 @@ import rSeven from "../../img/reviews/rSeven.webp";
 import rEight from "../../img/reviews/rEight.webp";
 import rNine from "../../img/reviews/rNine.webp";
 import { Modal } from "../Modal";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const reviews = [
   {
@@ -36,7 +36,7 @@ const reviews = [
   },
 ];
 
-export const Reviews = () => {
+export const Reviews = ({isHomePage}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -47,7 +47,9 @@ export const Reviews = () => {
 
   return (
     <>
+    {!isHomePage && (
       <Helmet>
+    <link rel="canonical" href="https://geometrystyle.by/reviews/" />
         <title>Отзывы наших клиентов</title>
         <meta
           name="description"
@@ -58,8 +60,28 @@ export const Reviews = () => {
           name="keywords"
           content="Geometry Style, отзывы клиентов, каменные столешницы, каменные подоконники, кварцевый агломерат, Беларусь, качество"
         />
-      </Helmet>
-      <section className={css.reviewsSection}>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Главная",
+                  item: "https://geometrystyle.by/"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Отзывы",
+                  item: "https://geometrystyle.by/reviews/"
+                }
+              ]
+            })}
+          </script>
+      </Helmet>)}
+      <section className={`${css.reviewsSection} ${isHomePage ? css.noPadding : ""}`}>
         <h2 className={css.title}>Отзывы наших клиентов</h2>
         <div className={css.reviewsGrid}>
           {reviews.map((review) => (

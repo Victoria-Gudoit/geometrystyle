@@ -2,11 +2,6 @@
   padding: 11rem 10rem;
 }
 
-.noPadding {
-  padding-top: 3rem; 
-  padding-bottom: 0;
-}
-
 .blockone {
   display: flex;
   flex-direction: column;
@@ -16,6 +11,12 @@
 .title {
   text-transform: uppercase;
   color: #926341;
+}
+
+.mainTitle {
+  text-transform: uppercase;
+  color: #926341;
+  padding-bottom: 1rem;
 }
 
 .subtitle {
@@ -42,24 +43,31 @@
 
 .paragraph {
   padding-bottom: 1rem;
+  font-weight: normal;
 }
 
 .item {
   padding-top: 1rem;
 }
 
+.main {
+  padding: 5rem 10rem;
+}
+
 @media (max-width: 600px) {
   .about {
     padding: 8rem 3rem;
   }
+  .main {
+    padding: 2rem 4rem;
+  }
   .noPadding {
-    padding-top: 1rem; 
+  padding-top: 1rem; 
   padding-bottom: 0;
 
   }
   
-
-  .title {
+ .title {
     padding-top: 2rem;
   }
 }

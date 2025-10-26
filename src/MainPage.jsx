@@ -1,39 +1,17 @@
 import React from "react";
-import { Slider } from "./components/Slider";
-import img01 from "./img/img-01.webp";
-import img02 from "./img/img-02.webp";
 import { Reviews } from "./components/Reviews";
-import { AboutUs } from "./components/AboutUs";
 import { ProductionProcess } from "./components/Production";
-import { Helmet } from "react-helmet";
 import { OurWorks } from "./components/OurWorks";
-
-const swiperImages = [
-  {
-    image: img01,
-    title: "МАСТЕРСКАЯ",
-    titleContinuous: "ИНТЕРЬЕРНЫХ РЕШЕНИЙ",
-    subtitle: "вы можете у нас:",
-    btn: "рассчитать стоимость",
-    path: "calculator",
-  },
-  {
-    image: img02,
-    title: "МАСТЕРСКАЯ",
-    titleContinuous: "ИНТЕРЬЕРНЫХ РЕШЕНИЙ",
-    subtitle: "вы можете у нас:",
-    btn: "рассчитать стоимость",
-    path: "materials",
-  },
-];
+import { HeroSection } from "./components/HeroSection/HeroSection";
+import { Helmet } from "react-helmet-async";
+import css from "./components/AboutUs/about.module.css";
 
 export const MainPage = ({ isHomePage }) => {
   return (
     <div>
       <Helmet>
-        <title>
-        Столешницы из камня в Минске | Geometry Style - Заказ и Производство
-        </title>
+      <link rel="canonical" href="https://geometrystyle.by/" />
+        <title>Столешницы из камня в Минске</title>
         <meta
           name="description"
           content="Geometry Style - производство столешниц, подоконников из камня в Минске и Беларуси. Рассчитайте стоимость и выберите материалы!"
@@ -41,14 +19,61 @@ export const MainPage = ({ isHomePage }) => {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Geometry Style, процесс производства, столешницы из камня, кварцевый агломерат, каменные подоконники Минск, технологии"
+          content="Geometry Style, столешницы из камня, кварцевый агломерат, каменные подоконники Минск, столешницы из кварца"
         />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Главная",
+                item: "https://geometrystyle.by/"
+              }
+            ]
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Geometrystyle",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Минск",
+              "addressCountry": "BY",
+            },
+            "telephone": "+375447517700",
+            "url": "https://geometrystyle.by/",
+            "description": "Производство столешниц, подоконников и барных стоек из кварцевого агломерата в Минске и Беларуси."
+          })}
+        </script>
       </Helmet>
-
-      <Slider swiperImages={swiperImages} />
-      <AboutUs isHomePage={true} />
-      <Reviews />
+      <HeroSection />
+      <div className={css.main}>
+        <h1 className={css.mainTitle}>Мастерская интерьерных решений «Геометрия стиля»</h1>
+        <div className={css.text}>
+          <p className={css.paragraph}>
+            <strong>
+              Мы специализируемся на изготовлении столешниц, подоконников, барных стоек и других
+              элементов из кварцевого агломерата в Минске и Беларуси,
+            </strong>{" "}
+            превращая ваши идеи в долговечные и стильные решения.
+          </p>
+        </div>
+        <h3 className={css.title}>Наши услуги:</h3>
+        <ul className={css.list}>
+          <li className={css.item}>Стильные и прочные столешницы для кухонь и ванных комнат.</li>
+          <li className={css.item}>Элегантные подоконники, идеально дополняющие интерьер.</li>
+          <li className={css.item}>Барные стойки, ресепшены и другие элементы для дома и бизнеса.</li>
+          <li className={css.item}>Консультации по подбору материалов и дизайну.</li>
+          <li className={css.item}>Профессиональная установка с гарантией качества.</li>
+        </ul>
+      </div>
       <OurWorks isHomePage={true} />
+      <Reviews isHomePage={true} />
       <ProductionProcess isHomePage={true} />
     </div>
   );

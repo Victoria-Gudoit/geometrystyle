@@ -6,14 +6,15 @@ import { Menu } from "../Menu";
 import "../Menu/menu.css";
 import logo from "../../img/logo3.svg";
 
+  export const items = [
+    { value: "О нас", href: "/aboutUs/" },
+    { value: "Наши работы", href: "/ourWorks/" },
+    { value: "Контакты", href: "/contacts/" },
+    { value: "Отзывы", href: "/reviews/" },
+  ];
+
 export const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
-  const items = [
-    { value: "О нас", href: "/aboutUs" },
-    { value: "Наши работы", href: "/ourWorks" },
-    { value: "Контакты", href: "/contacts" },
-    { value: "Отзывы", href: "/reviews" },
-  ];
 
   return (
     <header className={css.header}>
@@ -37,9 +38,10 @@ export const Header = () => {
           ))}
         </ul>{" "}
       </nav>
+      <a className={css.phone} href="tel:+375447517700">+375 (44) 751-77-00</a>
       <div className={css.btns}>
-        <MyButton to="/materials">Материалы</MyButton>
-        <MyButton to="/production">Производство</MyButton>
+        <MyButton to="/materials/">Материалы</MyButton>
+        <MyButton to="/production/">Производство</MyButton>
       </div>
       <Menu
         active={menuActive}

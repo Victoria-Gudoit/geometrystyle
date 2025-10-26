@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import css from "./production.module.css";
 import { videos } from "../../data";
 import { VideoModal } from "../VideoModal";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export const ProductionProcess = ({ isHomePage }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,18 +34,41 @@ export const ProductionProcess = ({ isHomePage }) => {
 
   return (
     <>
-      <Helmet>
-        <title>Geometry Style - Процесс Производства</title>
-        <meta
-          name="description"
-          content="Узнайте о процессе производства от Геометрии Стиля — видео о создании столешниц и интерьерных решений из кварцевого агломерата в Беларуси."
-        />
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="keywords"
-          content="столешницы из камня, каменные столешницы, кварцевые подоконники, Минск, Беларусь, Geometry Style"
-        />
-      </Helmet>
+      {!isHomePage && (
+        <Helmet>
+    <link rel="canonical" href="https://geometrystyle.by/production/" />
+          <title>Geometry Style - Процесс Производства</title>
+          <meta
+            name="description"
+            content="Узнайте о процессе производства от Геометрии Стиля — видео о создании столешниц и интерьерных решений из кварцевого агломерата в Беларуси."
+          />
+          <meta name="robots" content="index, follow" />
+          <meta
+            name="keywords"
+            content="столешницы из камня, каменные столешницы, кварцевые подоконники, Минск, Беларусь, процесс производства"
+          />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Главная",
+                  item: "https://geometrystyle.by/"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Процесс производства",
+                  item: "https://geometrystyle.by/production/"
+                }
+              ]
+            })}
+          </script>
+        </Helmet>
+      )}
       <section className={`${css.main} ${isHomePage ? css.noPadding : ""}`}>
         <h1 className={css.title}>Процесс производства</h1>
         <div className={css.videoList}>
@@ -59,7 +82,8 @@ export const ProductionProcess = ({ isHomePage }) => {
                 controls
                 loop
                 playsInline
-                aria-label={video.title}/>
+                aria-label={video.title}
+              />
               <h2 onClick={() => openModal(video)} className={css.videoTitle}>
                 {video.title}
               </h2>

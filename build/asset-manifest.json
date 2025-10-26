@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f2295353.css",
-    "main.js": "/static/js/main.de958f81.js",
+    "main.css": "/static/css/main.5e18fb83.css",
+    "main.js": "/static/js/main.68f2664e.js",
     "static/media/process1.MOV": "/static/media/process1.95f67ccd9f808467b257.MOV",
     "static/media/process3.MOV": "/static/media/process3.8e18446f68456aff1e9c.MOV",
     "static/media/process2.MOV": "/static/media/process2.65100a239b6283f65156.MOV",
@@ -9,7 +9,6 @@
     "static/media/IMG_7679.MOV": "/static/media/IMG_7679.d051c8239d56b43da3a1.MOV",
     "static/media/w_4.webp": "/static/media/w_4.548e30ba25ce59cf8c4c.webp",
     "static/media/IMG_7691.MOV": "/static/media/IMG_7691.e94079a17dc6c4d44142.MOV",
-    "static/media/img-02.webp": "/static/media/img-02.7efd648685d6f0127836.webp",
     "static/media/9010 Корсика.webp": "/static/media/9010 Корсика.f07ee7674b23639bcab6.webp",
     "static/media/9603 Сен-Мало.webp": "/static/media/9603 Сен-Мало.001d7cd6bfb18b11d156.webp",
     "static/media/Venetian Bronze.webp": "/static/media/Venetian Bronze.19e497a6672a8f48c437.webp",
@@ -342,11 +341,11 @@
     "static/media/ForzaFume.webp": "/static/media/ForzaFume.db0953333c9cf3b30c26.webp",
     "static/media/Nocciola.webp": "/static/media/Nocciola.c6aac68a4a89d68a0972.webp",
     "index.html": "/index.html",
-    "main.f2295353.css.map": "/static/css/main.f2295353.css.map",
-    "main.de958f81.js.map": "/static/js/main.de958f81.js.map"
+    "main.5e18fb83.css.map": "/static/css/main.5e18fb83.css.map",
+    "main.68f2664e.js.map": "/static/js/main.68f2664e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2295353.css",
-    "static/js/main.de958f81.js"
+    "static/css/main.5e18fb83.css",
+    "static/js/main.68f2664e.js"
   ]
 }

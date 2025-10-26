@@ -7,7 +7,7 @@ import radianz from "../../radianz/Aster.webp";
 import belenco from "../../belenco/Alinda.webp";
 import stratos from "../../stratos/Calacatta Classic.webp";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export const MaterialsPage = () => {
   const materials = [
@@ -23,6 +23,7 @@ export const MaterialsPage = () => {
   return (
     <>
       <Helmet>
+    <link rel="canonical" href="https://geometrystyle.by/materials/" />
         <title>Geometry Style - Кварцевый агломерат</title>
         <meta
           name="description"
@@ -33,6 +34,26 @@ export const MaterialsPage = () => {
           name="keywords"
           content="Geometry Style, Геометрия стиля, кварцевые материалы, Avant Quartz, Noblle, Caesarstone, Belenco, Минск, Беларусь"
         />
+        <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Главная",
+                  item: "https://geometrystyle.by/"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Материалы",
+                  item: "https://geometrystyle.by/materials/"
+                }
+              ]
+            })}
+          </script>
       </Helmet>
       <section className={css.main}>
         <h1 className={css.title}>Кварц</h1>
@@ -40,7 +61,7 @@ export const MaterialsPage = () => {
           {materials.map((material) => (
             <Link
               key={material.id}
-              to={`/material/${material.id}`}
+              to={`/material/${material.id}/`}
               className={css.wrapper}
             >
               <img
