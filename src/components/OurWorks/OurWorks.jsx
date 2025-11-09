@@ -43,7 +43,7 @@ export const OurWorks = ({ isHomePage }) => {
         </Helmet>
       )}
       <section className={`${css.main} ${isHomePage ? css.noPadding : ""}`}>
-        <h1 className={css.title}>Наши работы</h1>
+        <h3 className={css.title}>Наши работы</h3>
         <div className={css.work}>
           {works.map((work) => (
             <Link
@@ -52,7 +52,7 @@ export const OurWorks = ({ isHomePage }) => {
               className={css.wrapper}
             >
               <img className={css.img} src={work.images[0]} alt={work.title} />
-              <h2 className={css.text}>{work.title}</h2>
+              <h3 className={css.text}>{work.title}</h3>
             </Link>
           ))}
         </div>

@@ -53,7 +53,7 @@ export const MainPage = ({ isHomePage }) => {
       </Helmet>
       <HeroSection />
       <div className={css.main}>
-        <h1 className={css.mainTitle}>Мастерская интерьерных решений «Геометрия стиля»</h1>
+        <h2 className={css.mainTitle}>Мастерская интерьерных решений «Геометрия стиля»</h2>
         <div className={css.text}>
           <p className={css.paragraph}>
             <strong>

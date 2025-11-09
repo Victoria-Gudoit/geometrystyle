@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Popup } from "./Popup";
 import { AppRouter } from "./components/AppRouter";
 import { BackToTopButton } from "./components/BackToTopButton";
 import { Footer } from "./components/Footer";
@@ -9,15 +8,6 @@ import css from "./style.module.css";
 import { Helmet } from "react-helmet-async";
 
 export const App = () => {
-  const [popupActive, setPopupActive] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPopupActive(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className={css.app}>
@@ -41,7 +31,6 @@ export const App = () => {
         <AppRouter />
       </main>
       <Footer />
-      <Popup active={popupActive} setActive={setPopupActive} />
     </div>
   );
 };

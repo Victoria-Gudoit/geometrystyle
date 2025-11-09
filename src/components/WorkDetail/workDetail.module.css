@@ -1,5 +1,5 @@
 .main {
-  padding: 11rem 1rem;
+  padding: 19rem 1rem;
 }
 .work {
   display: flex;
@@ -73,10 +73,9 @@
 }
 
 @media (max-width: 992px) {
-
   .wrapper {
     width: 100%;
-    max-width: 40rem; 
+    max-width: 40rem;
   }
 
   .wrapper:hover {

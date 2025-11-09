@@ -1,22 +1,48 @@
 .header {
-  background-color: #3b3937;
-  height: 8rem;
+  background-color: RGB(57, 56, 54);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+  padding: 1rem 5rem 1rem 10rem;
   color: #fff;
   position: fixed;
   width: 100%;
   z-index: 50;
 }
-
+.headerLeft {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+.information {
+  display: flex;
+  align-items: center;
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+  align-self: flex-end;
+  padding-bottom: 1rem;
+}
+.divider {
+  height: 1px;
+  background-color: rgb(255 226 226 / 20%);
+  width: 135%;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
 .logo {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-
 .title {
   font-weight: bold;
   color: #dbb48a;
@@ -26,88 +52,161 @@
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
     1px 1px 0 black;
 }
-
 .subtitle {
   font-size: 1.6rem;
 }
-
 .img {
-  width: 21rem;
-  height: 21rem;
+  width: 16rem;
 }
-
+.paddingright {
+  padding-right: 35rem;
+}
 .list {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 14rem;
 }
-
 .btns {
   display: flex;
   gap: 3rem;
   padding-right: 1.3rem;
 }
-
+.items {
+  position: relative;
+}
 .items:hover {
   color: #ffd6a8;
 }
-
 .phone {
-  font-size: 1.6rem; 
-  color: #fff;
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
 }
-
-.phone:hover {
+.phone > a:hover {
   color: #ffd6a8;
 }
-
+.hasSubmenu:hover {
+  cursor: pointer;
+}
+.calc {
+  width: 16rem;
+  height: 5.4rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 2px solid #a9845c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.calc:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: #926341;
+  color: #926341;
+}
+.social {
+  gap: 1rem;
+  display: flex;
+}
 .burger {
   width: 30px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 125px;
+  margin-right: 35px;
+  margin-top: 42px;
   position: relative;
   cursor: pointer;
   display: none;
 }
-
 .burger::before {
   content: "";
   position: absolute;
   top: 0;
-  width: 30px;
+  width: 40px;
   background-color: #a9845c;
-  height: 2px;
+  height: 4px;
 }
-
 .burger span {
   position: absolute;
-  top: 15px;
-  width: 30px;
+  top: 13px;
+  width: 40px;
   background-color: #a9845c;
-  height: 2px;
+  height: 4px;
 }
-
 .burger::after {
   content: "";
   position: absolute;
   bottom: 0;
-  width: 30px;
+  width: 40px;
   background-color: #a9845c;
-  height: 2px;
+  height: 4px;
 }
-
-
-@media (max-width: 1270px) {
-  .phone {
-    display: none;
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #3b3937;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.hasSubmenu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.submenuItem {
+  padding: 8px 20px;
+}
+.submenuItem a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.9rem;
+}
+.submenuItem a:hover {
+  color: #ffd6a8;
+}
+@media (max-width: 1780px) {
+  .list {
+    gap: 11rem;
   }
 }
-
-
+@media (max-width: 1780px) {
+  .list {
+    gap: 6rem;
+  }
+}
+@media (max-width: 1330px) {
+  .list {
+    gap: 3rem;
+  }
+}
+@media (max-width: 1230px) {
+  .list {
+    font-size: 1.8rem;
+  }
+}
 @media (max-width: 1170px) {
   .header {
     padding: 1rem;
+  }
+  .navigation {
+    display: none;
   }
   .burger {
     display: block;
@@ -119,17 +218,37 @@
     display: none;
   }
   .header {
-    height: 8rem;
     flex-direction: row;
     padding: 1rem 1.2rem;
     justify-content: flex-start;
   }
-  .phone {
-    display: block;
-    font-size: 1.8rem; 
+  .divider {
+    display: none;
+  }
+  .sections {
+    flex-direction: row;
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0rem;
+
+    gap: 4rem;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    padding-left: 5rem;
   }
 }
-
+@media (max-width: 658px) {
+  .contacts {
+    padding-left: 0;
+    gap: 3rem;
+  }
+  .burger {
+    margin-left: 35px;
+  }
+}
 @media (max-width: 491px) {
   .phone {
     display: none;

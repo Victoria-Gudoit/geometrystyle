@@ -82,7 +82,7 @@ export const Reviews = ({isHomePage}) => {
           </script>
       </Helmet>)}
       <section className={`${css.reviewsSection} ${isHomePage ? css.noPadding : ""}`}>
-        <h2 className={css.title}>Отзывы наших клиентов</h2>
+        <h3 className={css.title}>Отзывы наших клиентов</h3>
         <div className={css.reviewsGrid}>
           {reviews.map((review) => (
             <div key={review.id} className={css.reviewCard}>

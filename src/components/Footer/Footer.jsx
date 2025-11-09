@@ -6,31 +6,40 @@ import telegram from "../../img/telegram.png";
 import { Link } from "react-router-dom";
 import { items } from "../Header/Header";
 
-
 export const Footer = () => {
+  const footerItems = [...items, { value: "Статьи", href: "/blog/" }];
+
   return (
     <footer className={css.footer}>
       <div className={css.wrapper}>
-      <nav>
-        <ul className={css.list}>
-          {" "}
-          {items.map((item) => (
-            <li key={item.href} className={css.items}>
-              <Link to={item.href}>{item.value}</Link>
-            </li>
-          ))}
-        </ul>{" "}
-      </nav>
+        <nav>
+          <ul className={css.list}>
+            {footerItems.map((item) => (
+              <li key={item.href} className={css.items}>
+                <Link to={item.href}>{item.value}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
         <address className={css.contacts}>
-        <div>     <img src={viber} className={css.viber} alt="viber" />
-        <a href="https://t.me/geometrystylequartz" target="_blank"><img src={telegram} alt="telegram" /></a>  </div>
+          <div>
+            <img src={viber} className={css.viber} alt="viber" />
+            <a href="https://t.me/geometrystylequartz" target="_blank">
+              <img src={telegram} alt="telegram" />
+            </a>
+          </div>
           +375 (44) 751-77-00 <br />
-          <a href="mailto:geometrystyle99@gmail.com"> geometrystyle99@gmail.com</a>
+          <a href="mailto:geometrystyle99@gmail.com">
+            geometrystyle99@gmail.com
+          </a>
         </address>
-        <a href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv" target="_blank"><img className={css.img} src={instagram} alt="instagram" /></a>
-        <div className={css.rights}>
-          © 2025. УНП 193857310
-        </div>
+        <a
+          href="https://www.instagram.com/geometrystyle.by?igsh=OGhrcnYybmszZ3hv"
+          target="_blank"
+        >
+          <img className={css.img} src={instagram} alt="instagram" />
+        </a>
+        <div className={css.rights}>© 2025. УНП 193857310</div>
       </div>
     </footer>
   );

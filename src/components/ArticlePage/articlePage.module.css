@@ -1,0 +1,147 @@
+.article {
+  padding: 19rem 3rem 10rem 3rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  font-family: "Arial", sans-serif;
+  line-height: 1.8;
+  color: #333;
+  text-align: center;
+}
+
+.article h1 {
+  text-align: center;
+  color: #926341;
+  font-size: 2.4rem;
+  margin: 1.5rem 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.intro {
+  font-size: 2.2rem;
+  color: #555;
+  font-style: italic;
+  text-align: center;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background: #f8f4f0;
+  border-radius: 12px;
+  border-left: 4px solid #926341;
+}
+
+.highlight {
+  background: #fff8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #926341;
+  border: 1px solid #f0e6e0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f0e6e0;
+  border-radius: 12px;
+}
+
+.grid div {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.decorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f0e6e0;
+  border-radius: 12px;
+}
+
+.decorGrid div {
+  background: white;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.article h2 {
+  color: #926341;
+  font-size: 2rem;
+  margin: 2.5rem 0 1.2rem;
+  position: relative;
+}
+
+.article h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #926341;
+  border-radius: 2px;
+}
+
+.cta {
+  text-align: center;
+  background: linear-gradient(135deg, #926341, #d4a57a);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin: 3rem 0;
+  box-shadow: 0 8px 24px rgba(146, 99, 65, 0.2);
+}
+
+.cta h3 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: white;
+  color: #926341;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #f0e6e0;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .article img {
+    height: 250px;
+  }
+  .grid,
+  .decorGrid {
+    grid-template-columns: 1fr;
+  }
+  .article h1 {
+    font-size: 2rem;
+  }
+}

@@ -70,7 +70,7 @@ export const ProductionProcess = ({ isHomePage }) => {
         </Helmet>
       )}
       <section className={`${css.main} ${isHomePage ? css.noPadding : ""}`}>
-        <h1 className={css.title}>Процесс производства</h1>
+        <h3 className={css.title}>Процесс производства</h3>
         <div className={css.videoList}>
           {videos.map((video, index) => (
             <div key={video.id} className={css.videoWrapper}>
@@ -84,9 +84,9 @@ export const ProductionProcess = ({ isHomePage }) => {
                 playsInline
                 aria-label={video.title}
               />
-              <h2 onClick={() => openModal(video)} className={css.videoTitle}>
+              <h3 onClick={() => openModal(video)} className={css.videoTitle}>
                 {video.title}
-              </h2>
+              </h3>
               <p className={css.videoDescription}>{video.description}</p>
             </div>
           ))}

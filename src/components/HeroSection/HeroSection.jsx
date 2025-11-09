@@ -41,9 +41,9 @@ export const HeroSection = () => {
           <h1 className={titleClasses}>
             Мастерская <br /> интерьерных решений
           </h1>
-          <span className={subTitleClasses}>
+          <h2 className={subTitleClasses}>
             Столешницы, подоконники <br /> и другие изделия из кварца
-          </span>
+          </h2>
           <MyButton
             to="/calculator"
             className={btnClasses}
